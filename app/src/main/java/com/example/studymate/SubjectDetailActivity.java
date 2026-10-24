@@ -148,8 +148,9 @@ public class SubjectDetailActivity extends AppCompatActivity {
         // "Docente: Andrea Gómez"
         ((TextView) findViewById(R.id.tvProfesor)).setText(getString(R.string.docente_nombre,
                 s.professor == null || s.professor.trim().isEmpty() ? "—" : s.professor.trim()));
-        // Un horario por línea (cada uno con su salón) y los salones sin repetir
-        String horarios = Horario.detalle(s);
+        // Un horario por línea y los salones sin repetir. Si todas las clases son en el
+        // mismo salón, no se repite en el horario (ya sale en la fila "Salón")
+        String horarios = Horario.detalleSinSalonRepetido(s);
         String salones = Horario.salones(s);
         ((TextView) findViewById(R.id.tvHorario)).setText(horarios.isEmpty() ? "—" : horarios);
         ((TextView) findViewById(R.id.tvSalon)).setText(salones.isEmpty() ? "—" : salones);

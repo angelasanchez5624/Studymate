@@ -98,14 +98,26 @@ public class Horario {
 
     /** Un horario por línea con su salón y un prefijo, ej. "⏰ Lun 4:00–6:00 p. m. · 📍 A-201". */
     public static String detalle(Subject s, String prefijo) {
+        return detalle(s, prefijo, true);
+    }
+
+    /**
+     * Igual que detalle(s), pero sin el salón si todas las clases son en el mismo
+     * (en ese caso ya se muestra aparte, en la fila "Salón").
+     */
+    public static String detalleSinSalonRepetido(Subject s) {
+        return detalle(s, "", salones(s).contains(","));
+    }
+
+    private static String detalle(Subject s, String prefijo, boolean conSalon) {
         StringBuilder sb = new StringBuilder();
         for (Bloque b : bloques(s)) {
             String t = texto(b);
             String salon = b.room == null ? "" : b.room;
-            if (t.isEmpty() && salon.isEmpty()) continue;
+            if (t.isEmpty() && (!conSalon || salon.isEmpty())) continue;
             if (sb.length() > 0) sb.append("\n");
             sb.append(prefijo).append(t.isEmpty() ? App.t(R.string.sin_horario) : t);
-            if (!salon.isEmpty()) sb.append(" · ").append(App.t(R.string.salon)).append(' ').append(salon);
+            if (conSalon && !salon.isEmpty()) sb.append(" · ").append(App.t(R.string.salon)).append(' ').append(salon);
         }
         return sb.toString();
     }
