@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo oscuro: fondo oscuro detrás de las marcas del día seleccionado, para que los colores claros se vean -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/card_bg"/>
+    <corners android:radius="8dp"/>
+</shape>

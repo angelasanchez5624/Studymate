@@ -164,13 +164,24 @@ public class CalendarActivity extends AppCompatActivity {
             else pendiente = true;
         }
         LinearLayout puntos = new LinearLayout(this);
+        // Solo del ancho de las marcas (así el fondito del día seleccionado es una pastilla pequeña)
+        LinearLayout.LayoutParams lpPuntos = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lpPuntos.gravity = Gravity.CENTER_HORIZONTAL;
+        lpPuntos.topMargin = dp(1);
+        puntos.setLayoutParams(lpPuntos);
         puntos.setOrientation(LinearLayout.HORIZONTAL);
         puntos.setGravity(Gravity.CENTER);
-        puntos.setMinimumHeight(dp(8));
-        // Cada estado tiene su símbolo además del color (no depende solo del color, WCAG 1.4.1)
-        if (pendiente) puntos.addView(punto("•", R.color.yellow_text));
-        if (vencida) puntos.addView(punto("!", R.color.red_text));
-        if (hecha) puntos.addView(punto("✓", R.color.mint_text));
+        puntos.setMinimumHeight(dp(11));
+        // Cada estado tiene su color y su forma: punto amarillo, círculo rojo con ! y círculo verde con ✓
+        // (no depende solo del color, WCAG 1.4.1)
+        if (pendiente) puntos.addView(punto(R.drawable.ic_estado_pendiente));
+        if (vencida) puntos.addView(punto(R.drawable.ic_estado_vencida));
+        if (hecha) puntos.addView(punto(R.drawable.ic_estado_completada));
+        if (elegido && (pendiente || vencida || hecha)) {
+            puntos.setBackgroundResource(R.drawable.bg_marcas_dia);
+            puntos.setPadding(dp(2), dp(1), dp(2), dp(1));
+        }
         cel.addView(puntos);
 
         // TalkBack: "15. Tiene entregas pendientes, vencidas"
@@ -194,18 +205,15 @@ public class CalendarActivity extends AppCompatActivity {
         return cel;
     }
 
-    /** Marca de estado bajo el número del día: símbolo + color (• pendiente, ! vencida, ✓ completada). */
-    private View punto(String simbolo, int color) {
-        TextView p = new TextView(this);
+    /** Marca de estado bajo el número del día: punto amarillo, círculo rojo con ! o círculo verde con ✓. */
+    private View punto(int icono) {
+        android.widget.ImageView p = new android.widget.ImageView(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.setMargins(dp(1), 0, dp(1), 0);
+        lp.gravity = Gravity.CENTER_VERTICAL;
         p.setLayoutParams(lp);
-        p.setText(simbolo);
-        p.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-        p.setTypeface(p.getTypeface(), Typeface.BOLD);
-        p.setIncludeFontPadding(false);
-        p.setTextColor(ContextCompat.getColor(this, color));
+        p.setImageResource(icono);
         p.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
         return p;
     }

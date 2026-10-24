@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Calendario mensual: puntos de colores en los días con entregas -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream"
@@ -17,6 +18,7 @@
         <ImageView
             style="@style/App.BackButton"
             android:id="@+id/btnAtras"
+            android:contentDescription="@string/volver"
             android:background="@drawable/bg_back_blue"/>
         <TextView
             style="@style/App.Title"
@@ -62,7 +64,7 @@
                 android:contentDescription="@string/mes_anterior"
                 android:padding="12dp"
                 android:src="@drawable/ic_anterior"
-                android:tint="@color/text_label"
+                app:tint="@color/text_label"
                 android:scaleType="fitCenter"/>
             <TextView
                 android:id="@+id/tvMes"
@@ -82,7 +84,7 @@
                 android:contentDescription="@string/mes_siguiente"
                 android:padding="12dp"
                 android:src="@drawable/ic_siguiente"
-                android:tint="@color/text_label"
+                app:tint="@color/text_label"
                 android:scaleType="fitCenter"/>
         </LinearLayout>
 
@@ -100,15 +102,43 @@
             android:layout_marginTop="4dp"
             android:orientation="vertical"/>
 
-        <!-- Leyenda de colores -->
-        <TextView
+        <!-- Leyenda: cada estado con su color y su forma (no depende solo del color, WCAG 1.4.1) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="@string/cal_leyenda"
-            android:textColor="@color/text_muted"
-            android:textSize="11sp"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_estado_pendiente"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/ley_pendiente"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                app:drawableStartCompat="@drawable/ic_estado_vencida"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/ley_vencida"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                app:drawableStartCompat="@drawable/ic_estado_completada"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/ley_completada"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Clases del día elegido (según el horario de cada materia) -->

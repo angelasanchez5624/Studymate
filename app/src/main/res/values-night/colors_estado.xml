@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Colores de estado del calendario. Cada uno contrasta al menos 3:1 con el fondo de la tarjeta (WCAG 1.4.11) -->
+<resources>
+    <color name="estado_pendiente">#F2CC4D</color>
+    <color name="estado_vencida">#F27F7F</color>
+    <color name="estado_completada">#5FD39A</color>
+    <!-- Color del símbolo dentro de cada círculo (✓, !, reloj) -->
+    <color name="estado_glifo">#16141E</color>
+</resources>

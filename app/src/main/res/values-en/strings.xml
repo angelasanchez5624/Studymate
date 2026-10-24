@@ -43,6 +43,9 @@
     <string name="eliminar_cuenta_msg">Your profile, subjects, tasks and grades will be deleted. This can\'t be undone.\n\nEnter your password to confirm:</string>
     <string name="eliminar">Delete</string>
     <string name="contrasena">Password</string>
+    <string name="contrasena_hint">Enter your password</string>
+    <string name="contrasena_nueva_hint">At least 6 characters</string>
+    <string name="contrasena_repite_hint">Repeat your password</string>
     <string name="clave_incorrecta">Wrong password</string>
     <string name="eliminando">Deleting account…</string>
     <string name="cuenta_eliminada">Your account was deleted</string>
@@ -146,7 +149,6 @@
     <string name="tarea_guardar">Save task</string>
     <string name="tarea_eliminar">Delete task</string>
     <string name="calendario">Calendar</string>
-    <string name="cal_leyenda">• Pending ! Overdue ✓ Done</string>
     <string name="entregas_hoy">Due today</string>
     <string name="cal_sin_entregas">Nothing due this day</string>
     <string name="saludo_anonimo">Hi, student</string>
@@ -568,4 +570,7 @@
     <string name="materia_elige">Choose the subject</string>
     <string name="materia_elige_error">Choose which subject this note is for</string>
     <string name="perfil_abrir">Open my profile</string>
+    <string name="ley_pendiente">Pending</string>
+    <string name="ley_vencida">Overdue</string>
+    <string name="ley_completada">Completed</string>
 </resources>
