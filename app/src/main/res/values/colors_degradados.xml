@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Colores de los degradados de las tarjetas y encabezados.
+    En modo claro son los mismos pasteles de siempre; en modo oscuro (values-night)
+    son versiones oscuras, para que el texto claro se lea encima.
+-->
+<resources>
+    <!-- Final del degradado de las tarjetas de colores (Inicio y Perfil) -->
+    <color name="tarjeta_azul_fin">@color/blue_pastel</color>
+    <color name="tarjeta_lila_fin">@color/lilac_pastel</color>
+    <color name="tarjeta_rosa_fin">@color/pink_pastel</color>
+    <color name="tarjeta_menta_fin">@color/mint_pastel</color>
+
+    <!-- Franja rosa-lila de arriba del Perfil y del menú ☰ -->
+    <color name="encabezado_ini">@color/pink_pastel</color>
+    <color name="encabezado_fin">@color/lilac_pastel</color>
+
+    <!-- Encabezado lila de cada materia -->
+    <color name="banner_materia_ini">@color/lilac_pastel</color>
+</resources>

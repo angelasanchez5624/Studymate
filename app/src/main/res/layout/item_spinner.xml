@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opción elegida de una lista desplegable (se ve igual que los campos de texto) -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:fontFamily="@font/nunito_regular"
+    android:maxLines="1"
+    android:paddingVertical="12dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="40dp"
+    android:textColor="@color/text_main"
+    android:textSize="15sp"/>

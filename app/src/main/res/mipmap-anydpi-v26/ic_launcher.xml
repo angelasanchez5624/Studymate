@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícono de StudyMate: la misma libreta 📖 del Login sobre el mismo degradado azul → lila.
+     Es adaptativo: cada fabricante lo recorta con su forma (círculo, gota, cuadrado...). -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>

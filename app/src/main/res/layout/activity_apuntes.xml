@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mis apuntes: todos los apuntes de todas las materias, con buscador -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView
+                android:id="@+id/tvTituloApuntes"
+                style="@style/App.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="@string/mis_apuntes"/>
+            <!-- + : elegir materia y escribir un apunte -->
+            <ImageView
+                style="@style/App.PlusButton"
+                android:id="@+id/btnAddApunte"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etBuscar"
+            android:drawableStart="@drawable/ic_buscar"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/text_label"
+            style="@style/App.Input"
+            android:layout_marginTop="16dp"
+            android:hint="@string/buscar_apuntes"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+        <!-- Chips para filtrar por materia: "Todas · Cálculo · Física…" (se llenan desde Java) -->
+        <HorizontalScrollView
+            android:id="@+id/scrollChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+            <LinearLayout
+                android:id="@+id/chipsMaterias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/listTodosApuntes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/tvVacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="24dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>

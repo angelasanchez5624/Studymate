@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Clase que ya terminó (Inicio): fondo gris suave en vez de transparencia -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/divider"/>
+    <corners android:radius="18dp"/>
+</shape>

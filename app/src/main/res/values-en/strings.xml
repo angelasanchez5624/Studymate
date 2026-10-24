@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English translation. Every key must also exist in values/strings.xml -->
+<resources>
+    <string name="app_name">StudyMate</string>
+
+    <string name="cancelar">Cancel</string>
+    <string name="aceptar">OK</string>
+    <string name="entendido">Got it</string>
+    <string name="sin_nombre">No name</string>
+    <string name="error_conexion">Couldn\'t finish. Check your connection</string>
+
+    <string name="nav_inicio">Home</string>
+    <string name="nav_materias">Subjects</string>
+    <string name="nav_tareas">Tasks</string>
+    <string name="nav_perfil">Profile</string>
+    <string name="editar_perfil">Edit profile</string>
+    <string name="sec_preferencias">Preferences</string>
+    <string name="sec_privacidad_soporte">Privacy &amp; support</string>
+    <string name="sec_cuenta">Account</string>
+    <string name="notificaciones">Notifications</string>
+    <string name="notif_activadas">Reminders on</string>
+    <string name="notif_desactivadas">Reminders off</string>
+    <string name="notif_sin_permiso">Blocked by the phone</string>
+    <string name="idioma">Language</string>
+    <string name="formato_24">24-hour time</string>
+    <string name="formato_24_sub">E.g. 14:00 instead of 2:00 p.m.</string>
+    <string name="formato_24_on">Using 24-hour time</string>
+    <string name="formato_24_off">Using a.m. / p.m.</string>
+    <string name="privacidad">Privacy</string>
+    <string name="privacidad_sub">Your data and what notifications show</string>
+    <string name="ayuda_soporte">Help &amp; support</string>
+    <string name="ayuda_soporte_sub">FAQ and contact</string>
+    <string name="cambiar_clave">Change password</string>
+    <string name="cambiar_clave_sub">We\'ll email you a link to change it</string>
+    <string name="cambiar_clave_msg">We\'ll send a link to %1$s so you can set a new password.</string>
+    <string name="enviar">Send</string>
+    <string name="revisa_correo">Check your email</string>
+    <string name="cerrar_sesion">Log out</string>
+    <string name="cerrar_sesion_msg">Are you sure you want to log out?</string>
+    <string name="salir">Log out</string>
+    <string name="eliminar_cuenta">Delete account</string>
+    <string name="eliminar_cuenta_sub">Permanently delete your account and data</string>
+    <string name="eliminar_cuenta_msg">Your profile, subjects, tasks and grades will be deleted. This can\'t be undone.\n\nEnter your password to confirm:</string>
+    <string name="eliminar">Delete</string>
+    <string name="contrasena">Password</string>
+    <string name="clave_incorrecta">Wrong password</string>
+    <string name="eliminando">Deleting account…</string>
+    <string name="cuenta_eliminada">Your account was deleted</string>
+    <string name="version">StudyMate · version %1$s</string>
+
+    <string name="idioma_titulo">Choose a language</string>
+    <string name="idioma_sistema">Use phone default</string>
+    <string name="idioma_es">Spanish</string>
+    <string name="idioma_en">English</string>
+
+    <string name="notif_recordatorios">Due date reminders</string>
+    <string name="notif_recordatorios_sub">Alerts before a task is due</string>
+    <string name="notif_dia">1 day before</string>
+    <string name="notif_dia_sub">Reminds you the day before it\'s due</string>
+    <string name="notif_horas">2 hours before</string>
+    <string name="notif_horas_sub">Reminds you shortly before the due time</string>
+    <string name="notif_sec_avisos">Alerts</string>
+    <string name="notif_sec_telefono">On your phone</string>
+    <string name="notif_permisos">Sound, vibration &amp; permissions</string>
+    <string name="notif_permisos_sub">Android settings for StudyMate</string>
+    <string name="notif_banner">Notifications are blocked, so reminders won\'t reach you.</string>
+    <string name="notif_permitir">Allow notifications</string>
+    <string name="notif_generica_titulo">StudyMate</string>
+    <string name="notif_generica_texto">You have a task due soon</string>
+
+    <string name="priv_sec_notif">Notifications</string>
+    <string name="priv_ocultar">Hide details on the lock screen</string>
+    <string name="priv_ocultar_sub">It will only say \"You have a task due soon\"</string>
+    <string name="priv_sec_datos">Your data</string>
+    <string name="priv_que_datos">What data does StudyMate keep?</string>
+    <string name="priv_que_datos_sub">What is stored and where</string>
+    <string name="priv_que_datos_texto">• Your email and password are handled by Firebase Authentication (we never see your password).\n\n• Your profile (name, major, university, semester and photo), subjects, tasks and grades are stored in Firebase Realtime Database, in a space only your account can read.\n\n• The phone only keeps your preferences (reminders, time format, language and theme) and a copy of your reminders to reschedule them after a restart.\n\n• StudyMate never sells or shares your data.</string>
+    <string name="priv_politica">Privacy policy</string>
+    <string name="priv_politica_sub">How we use your information</string>
+    <string name="priv_politica_texto">StudyMate is a study planner built as a university project.\n\n1. What we collect: only what you type into the app (profile, subjects, schedules, tasks and grades) and your email to sign in.\n\n2. Why: to show your information on any phone where you sign in and to send you due date reminders.\n\n3. Who we share it with: nobody. Data is stored on Google Firebase services.\n\n4. Your rights: you can edit your profile, erase your academic data or delete your account at any time from the menu in Profile.\n\n5. Contact: write to us from Help &amp; support.</string>
+    <string name="priv_sec_borrar">Erase</string>
+    <string name="priv_borrar">Erase my academic data</string>
+    <string name="priv_borrar_sub">Subjects, tasks and grades (your account stays)</string>
+    <string name="priv_borrar_msg">All your subjects, tasks and grades will be erased. Your account and profile stay. This can\'t be undone.</string>
+    <string name="priv_borrar_ok">Erase all</string>
+    <string name="priv_borrado">Your academic data was erased</string>
+
+    <string name="ayuda_sec_faq">Frequently asked questions</string>
+    <string name="ayuda_sec_contacto">Contact</string>
+    <string name="ayuda_escribir">Contact support</string>
+    <string name="ayuda_escribir_sub">Questions, suggestions or ideas</string>
+    <string name="ayuda_reportar">Report a problem</string>
+    <string name="ayuda_reportar_sub">Something isn\'t working right</string>
+    <string name="ayuda_acerca">About StudyMate</string>
+    <string name="ayuda_acerca_texto">StudyMate %1$s\n\nYour university planner: keep subjects, schedules, tasks and grades in one place, with reminders so you never miss a due date.\n\nMade with as a university project.</string>
+    <string name="ayuda_asunto_soporte">StudyMate · Support</string>
+    <string name="ayuda_asunto_problema">StudyMate · Problem report</string>
+    <string name="ayuda_cuerpo_problema">Describe what happened and what you were doing:\n\n\n\n— Phone details (please keep) —\nApp version: %1$s\nAndroid: %2$s\nPhone: %3$s</string>
+    <string name="ayuda_sin_correo">No email app found. Write to us at %1$s</string>
+
+    <string-array name="faq_preguntas">
+        <item>Why am I not getting reminders?</item>
+        <item>How do I add a subject with its schedule?</item>
+        <item>How is my average calculated?</item>
+        <item>Will I lose my data if I change phones?</item>
+        <item>How do I change my profile photo?</item>
+        <item>I forgot my password, what do I do?</item>
+    </string-array>
+    <string-array name="faq_respuestas">
+        <item>Go to Profile → Menu → Notifications and make sure reminders are on and that the phone allows notifications. Some phones with battery saver delay alerts by a few minutes.</item>
+        <item>Open the Subjects tab and tap \"+\". Enter the name and teacher, then add the class days and times.</item>
+        <item>Inside each subject you record your grades with their weight. StudyMate calculates the subject\'s weighted average on a 0–5 scale (3.0 to pass).</item>
+        <item>No. Everything is saved to your account in the cloud: sign in with the same email on the other phone and your information will be there.</item>
+        <item>In the Profile tab tap your photo (or the emoji) and pick an image from your gallery. Tap it again to change or remove it.</item>
+        <item>On the sign-in screen tap \"Forgot your password?\" and we\'ll email you. If you\'re already signed in, use Profile → Menu → Change password.</item>
+    </string-array>
+
+    <!-- ===== Textos de toda la app (pantallas, mensajes y avisos) ===== -->
+    <string name="nota_nueva">New grade</string>
+    <string name="nota_nombre">Assessment name</string>
+    <string name="nota_nombre_hint">E.g. Midterm 1</string>
+    <string name="nota_valor">Grade (0 to 5)</string>
+    <string name="nota_valor_hint">E.g. 4.2</string>
+    <string name="nota_peso">Weight (%)</string>
+    <string name="nota_peso_hint">E.g. 30</string>
+    <string name="nota_guardar">Save grade</string>
+    <string name="nota_eliminar">Delete grade</string>
+    <string name="materia_nueva">New subject</string>
+    <string name="materia_nombre">Subject name</string>
+    <string name="materia_nombre_hint">E.g. Differential Calculus</string>
+    <string name="profesor">Teacher</string>
+    <string name="profesor_hint">E.g. Dr. Laura Smith</string>
+    <string name="horario_agregar">+ Add another schedule</string>
+    <string name="materia_guardar">Save subject</string>
+    <string name="materia_eliminar">Delete subject</string>
+    <string name="tarea_nueva">New task</string>
+    <string name="tarea_nombre">Task name</string>
+    <string name="tarea_nombre_hint">E.g. Integrals homework</string>
+    <string name="materia">Subject</string>
+    <string name="prioridad">Priority</string>
+    <string name="fecha_entrega">Due date</string>
+    <string name="hora">Time</string>
+    <string name="hora_hint">11:59 PM</string>
+    <string name="descripcion">Description</string>
+    <string name="descripcion_hint">Task details...</string>
+    <string name="tarea_guardar">Save task</string>
+    <string name="tarea_eliminar">Delete task</string>
+    <string name="calendario">Calendar</string>
+    <string name="cal_leyenda">• Pending ! Overdue ✓ Done</string>
+    <string name="entregas_hoy">Due today</string>
+    <string name="cal_sin_entregas">Nothing due this day</string>
+    <string name="saludo_anonimo">Hi, student</string>
+    <string name="resumen_hoy">Today\'s summary</string>
+    <string name="clases">Classes</string>
+    <string name="pendientes">Pending</string>
+    <string name="completadas">Done</string>
+    <string name="tareas_pendientes">Pending tasks</string>
+    <string name="cambiar_foto">Change photo</string>
+    <string name="nombre_completo">Full name</string>
+    <string name="correo">Email</string>
+    <string name="carrera">Major</string>
+    <string name="universidad">University</string>
+    <string name="semestre">Semester</string>
+    <string name="guardar_cambios">Save changes</string>
+    <string name="lema">Your university planner</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="correo_hint">student@university.edu</string>
+    <string name="olvidaste">Forgot your password?</string>
+    <string name="iniciar_sesion">Sign in</string>
+    <string name="sin_cuenta">Don\'t have an account?</string>
+    <string name="crear_cuenta">Create account</string>
+    <string name="foto_perfil">Profile photo</string>
+    <string name="nombre_hint">Jane Smith</string>
+    <string name="correo_hint2">jane@university.edu</string>
+    <string name="confirmar_contrasena">Confirm password</string>
+    <string name="registrarme">Sign up</string>
+    <string name="ya_cuenta">Already have an account?</string>
+    <string name="estadisticas">Stats</string>
+    <string name="completadas_semana">Completed per week</string>
+    <string name="ultimas_semanas">Last 8 weeks (the dark bar is this week)</string>
+    <string name="avance_materia">Progress by subject</string>
+    <string name="materia_mayus">SUBJECT</string>
+    <string name="informacion">Information</string>
+    <string name="horario">Schedule</string>
+    <string name="salon">Room</string>
+    <string name="sin_tareas_ahora">No tasks for now</string>
+    <string name="calificaciones">Grades</string>
+    <string name="promedio_ponderado">Weighted average</string>
+    <string name="primera_nota">Tap + to add your first grade</string>
+    <string name="materia_editar">Edit subject</string>
+    <string name="mis_materias">My subjects</string>
+    <string name="mis_tareas">My tasks</string>
+    <string name="buscar_hint">Search task or subject</string>
+    <string name="todas">All</string>
+    <string name="ordenar">Sort by</string>
+    <string name="orden_fecha">Date</string>
+    <string name="orden_materia">Subject</string>
+    <string name="sin_tareas_categoria">No tasks in this category</string>
+    <string name="quitar">Remove</string>
+    <string name="dias_clase">Class days</string>
+    <string name="dia_lun">Mon</string>
+    <string name="dia_mar">Tue</string>
+    <string name="dia_mie">Wed</string>
+    <string name="dia_jue">Thu</string>
+    <string name="dia_vie">Fri</string>
+    <string name="dia_sab">Sat</string>
+    <string name="dia_dom">Sun</string>
+    <string name="hora_inicio">Start time</string>
+    <string name="hora_inicio_hint">8:00 AM</string>
+    <string name="hora_fin">End time</string>
+    <string name="hora_fin_hint">10:00 AM</string>
+    <string name="salon_hint">E.g. A-201</string>
+    <string name="sin_horario">No schedule</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="retraso_min">%1$d min late</string>
+    <string name="retraso_hora">%1$d hour late</string>
+    <string name="retraso_horas">%1$d hours late</string>
+    <string name="retraso_dia">%1$d day late</string>
+    <string name="retraso_dias">%1$d days late</string>
+    <string name="prio_alta">High</string>
+    <string name="prio_media">Medium</string>
+    <string name="prio_baja">Low</string>
+    <string name="nota_sin">No grades yet</string>
+    <string name="nota_aprobada">Subject passed with %1$s</string>
+    <string name="nota_reprobada">Final grade %1$s · not enough to pass</string>
+    <string name="nota_asegurada">You\'ve already secured %1$s with what\'s been graded</string>
+    <string name="nota_imposible">You can no longer reach %1$s with the remaining %2$d%%</string>
+    <string name="nota_necesitas">You need %1$s on the remaining %2$d%% to pass</string>
+    <string name="sin_materia">No subject</string>
+    <string name="recordatorio_manana">Due tomorrow</string>
+    <string name="recordatorio_2h">Due in 2 hours</string>
+    <string name="canal_nombre">Task due dates</string>
+    <string name="canal_desc">Alerts before the due date</string>
+    <string name="formato_fecha_larga">EEEE, MMMM d</string>
+    <string name="saludo">Hi, %1$s</string>
+    <string name="hoy">Today</string>
+    <string name="clase_terminada">Finished</string>
+    <string name="clase_en_curso">In progress</string>
+    <string name="sin_materias_clases">Add your subjects to see your classes here</string>
+    <string name="sin_clases_hoy">No classes today</string>
+    <string name="vencida_fecha">Overdue %1$s</string>
+    <string name="entrega_tardia">Late submission: %1$s</string>
+    <string name="sin_coincidencias">No tasks match your search</string>
+    <string name="entregada_tarde">Submitted %1$s</string>
+    <string name="completada">Done</string>
+    <string name="vencida_tag">Overdue · %1$s</string>
+    <string name="horario_sin_definir">No schedule set</string>
+    <string name="sin_materias">No subjects yet. Tap + to add one</string>
+    <string name="materias_n_1">%1$d subject this semester</string>
+    <string name="materias_n">%1$d subjects this semester</string>
+    <string name="materia_nombre_error">Enter the subject name</string>
+    <string name="hora_fin_error">Must be after the start time</string>
+    <string name="cambios_guardados">Changes saved</string>
+    <string name="materia_guardada">Subject saved</string>
+    <string name="horario_n">Schedule %1$d</string>
+    <string name="eliminar_tareas_1">Its %1$d task will also be deleted.</string>
+    <string name="eliminar_tareas_n">Its %1$d tasks will also be deleted.</string>
+    <string name="eliminar_msg">Are you sure you want to delete “%1$s”?</string>
+    <string name="materia_eliminada">Subject deleted</string>
+    <string name="primero_materia">Add a subject first</string>
+    <string name="tarea_editar">Edit task</string>
+    <string name="tarea_nombre_error">Enter the task name</string>
+    <string name="tarea_guardada">Task saved</string>
+    <string name="no_deshacer">This can\'t be undone.</string>
+    <string name="tarea_eliminada">Task deleted</string>
+    <string name="nota_editar">Edit grade</string>
+    <string name="nota_nombre_error">Enter the assessment name</string>
+    <string name="nota_rango_error">Enter a grade between 0 and %1$s</string>
+    <string name="peso_error">The weight must be between 1 and 100</string>
+    <string name="peso_max_error">You already have %1$s%% recorded; you can add at most %2$s%%</string>
+    <string name="nota_guardada">Grade saved</string>
+    <string name="nota_eliminada">Grade deleted</string>
+    <string name="entregas_del">Due on %1$s</string>
+    <string name="estado_vencida">Overdue: %1$s</string>
+    <string name="estado_entrega">Due: %1$s</string>
+    <string name="tareas_n">Tasks (%1$d)</string>
+    <string name="evaluado">Graded: %1$d%% of the subject · Accumulated: %2$s</string>
+    <string name="vale">Worth %1$d%%</string>
+    <string name="a_tiempo">On time</string>
+    <string name="tardias">Late</string>
+    <string name="sin_tareas_registradas">You don\'t have any tasks yet</string>
+    <string name="correo_invalido">Enter a valid email</string>
+    <string name="min_6">At least 6 characters</string>
+    <string name="correo_para_enlace">Enter your email so we can send you the link</string>
+    <string name="enlace_enviado">We sent you an email to reset your password</string>
+    <string name="sin_internet">No internet connection</string>
+    <string name="credenciales_mal">Wrong email or password</string>
+    <string name="error_generico">Couldn\'t complete the action. Try again</string>
+    <string name="nombre_error">Enter your name</string>
+    <string name="claves_no_coinciden">Passwords don\'t match</string>
+    <string name="cuenta_sin_datos">Account created, but your details weren\'t saved</string>
+    <string name="cuenta_creada">Account created. Sign in to continue</string>
+    <string name="correo_registrado">That email is already registered</string>
+    <string name="clave_debil">The password is too weak</string>
+    <string name="correo_no_valido">The email is not valid</string>
+    <string name="error_crear_cuenta">Couldn\'t create the account. Try again</string>
+    <string name="semestre_elegir">Select semester</string>
+    <string name="perfil_guardado">Profile saved</string>
+    <string name="foto_cambiar">Change photo</string>
+    <string name="foto_quitar">Remove photo</string>
+    <string name="foto_subiendo">Uploading photo...</string>
+    <string name="foto_error">Couldn\'t read the image</string>
+    <string name="foto_ok">Photo updated</string>
+    <string-array name="meses">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="semestres">
+        <item>1st semester</item>
+        <item>2nd semester</item>
+        <item>3rd semester</item>
+        <item>4th semester</item>
+        <item>5th semester</item>
+        <item>6th semester</item>
+        <item>7th semester</item>
+        <item>8th semester</item>
+        <item>9th semester</item>
+        <item>10th semester</item>
+    </string-array>
+
+    <!-- Menú ☰ -->
+    <string name="sec_estadisticas">Your progress</string>
+    <string name="mis_estadisticas_menu">My stats</string>
+    <string name="mis_estadisticas_sub">Completed, on time and progress by subject</string>
+    <string name="menu_abrir">Open menu</string>
+
+    <!-- Inicio: próximas clases · Género del estudiante (al crear la cuenta) -->
+    <string name="proximas_clases">Upcoming classes</string>
+    <string name="manana">Tomorrow</string>
+    <string name="sin_pendientes">No pending tasks</string>
+    <string-array name="dias_largos">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string name="docente_nombre">Teacher: %1$s</string>
+
+    <!-- Correcciones y funciones nuevas: cargando, tipo de tarea, avisos de clase, nota necesaria, tema -->
+    <string name="cargando">Loading…</string>
+    <string name="tipo">Type</string>
+    <string name="formato_fecha_media">EEE, MMM d</string>
+    <string-array name="tipos_tarea">
+        <item>Homework</item>
+        <item>Exam</item>
+        <item>Workshop</item>
+        <item>Presentation</item>
+        <item>Project</item>
+    </string-array>
+    <string name="promedio_general">Overall average</string>
+    <string name="promedio_sin_notas">You don\'t have any grades yet</string>
+    <string name="recordatorio_examen">Exam in 3 days</string>
+    <string name="clase_en_min">Class in %1$d min</string>
+    <string name="notif_generica_clase">You have a class soon</string>
+    <string name="notif_sec_clases">Classes</string>
+    <string name="notif_clases">Class reminders</string>
+    <string name="notif_clases_sub">Alerts you before each class, with the room</string>
+    <string name="notif_clases_min">Remind me</string>
+    <string name="min_antes">%1$d min before</string>
+    <string name="tema">Theme</string>
+    <string name="tema_titulo">Choose a theme</string>
+    <string name="tema_sistema">Use phone setting</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_oscuro">Dark</string>
+    <plurals name="promedio_materias">
+        <item quantity="one">From %d subject with grades</item>
+        <item quantity="other">From %d subjects with grades</item>
+    </plurals>
+
+    <!-- Calendario: clases del día -->
+    <string name="clases_hoy_cal">Today\'s classes</string>
+    <string name="clases_del">Classes on %1$s, %2$s</string>
+    <string name="cal_sin_clases">No classes this day</string>
+    <string name="ver_calendario">See calendar ›</string>
+    <string name="ordenar_actual">Sort: %1$s ▾</string>
+    <string name="orden_prioridad">Priority</string>
+
+    <!-- Mapas (OpenStreetMap): ubicación de las clases -->
+    <string name="ubicacion_clase">Class location</string>
+    <string name="elegir_mapa">Pick on the map</string>
+    <string name="ubicacion_marcada">Location set · Change</string>
+    <string name="mapa_instruccion">Tap the map to mark where the class is (room, building or campus).</string>
+    <string name="guardar_ubicacion">Save location</string>
+    <string name="mi_ubicacion">My location</string>
+    <string name="marca_primero">First tap the map to mark the place</string>
+    <string name="sin_permiso_ubicacion">Without location permission we can\'t show where you are</string>
+    <string name="buscando_ubicacion">Finding your location…</string>
+    <string name="sin_app_mapas">No maps app installed</string>
+    <string name="como_llegar">Get directions ›</string>
+    <string name="mapa_clases">My classes map</string>
+    <string name="mapa_vacio">No subject has a location yet. Set it on each schedule (\"Classroom location\") when you create or edit a subject.</string>
+
+    <!-- Nueva nota: vista previa mientras escribes -->
+    <string name="vista_llevas">You have %1$s accumulated</string>
+    <string name="vista_llevarias">With this grade you\'d have %1$s accumulated</string>
+    <string name="vista_evaluado">Graded: %1$s%% of the subject</string>
+
+    <!-- Selection mode: delete one or many -->
+    <plurals name="seleccionados">
+        <item quantity="one">%d selected</item>
+        <item quantity="other">%d selected</item>
+    </plurals>
+    <plurals name="notas_eliminadas">
+        <item quantity="one">Grade deleted</item>
+        <item quantity="other">%d grades deleted</item>
+    </plurals>
+    <plurals name="materias_eliminadas">
+        <item quantity="one">Subject deleted</item>
+        <item quantity="other">%d subjects deleted</item>
+    </plurals>
+    <plurals name="tareas_eliminadas">
+        <item quantity="one">Task deleted</item>
+        <item quantity="other">%d tasks deleted</item>
+    </plurals>
+    <plurals name="eliminar_notas">
+        <item quantity="one">Delete the selected grade?</item>
+        <item quantity="other">Delete the %d selected grades?</item>
+    </plurals>
+    <plurals name="eliminar_materias">
+        <item quantity="one">Delete the selected subject?</item>
+        <item quantity="other">Delete the %d selected subjects?</item>
+    </plurals>
+    <plurals name="eliminar_tareas">
+        <item quantity="one">Delete the selected task?</item>
+        <item quantity="other">Delete the %d selected tasks?</item>
+    </plurals>
+    <plurals name="permanente">
+        <item quantity="one">It will be permanently deleted.</item>
+        <item quantity="other">They will be permanently deleted.</item>
+    </plurals>
+    <string name="saludo_cargando">Hi</string>
+    <string name="clases_titulo_hoy">Today\'s classes</string>
+    <string name="clases_titulo_manana">Tomorrow\'s classes</string>
+    <string name="clases_titulo_dia">%1$s classes</string>
+    <string name="que_agregar">What do you want to do?</string>
+    <string name="calcular_nota">Calculate grade</string>
+    <string name="calcular_elige_materia">Which subject?</string>
+    <!-- Home + button: choose subject -->
+    <string name="elegir_sin_materias">Add a subject first.</string>
+    <!-- Notes for each subject -->
+    <string name="apuntes">Notes</string>
+    <string name="apuntes_n">Notes (%1$d)</string>
+    <string name="apunte_nuevo">New note</string>
+    <string name="apunte_editar">Edit note</string>
+    <string name="apunte_titulo">Title</string>
+    <string name="apunte_titulo_hint">E.g. Monday\'s class</string>
+    <string name="apunte_texto">Note</string>
+    <string name="apunte_texto_hint">Write your notes here…</string>
+    <string name="apunte_guardar">Save note</string>
+    <string name="apunte_guardado">Note saved</string>
+    <string name="apunte_vacio_error">Write something in the note</string>
+    <string name="apunte_eliminar">Delete note</string>
+    <string name="primer_apunte">Tap + to write your first note</string>
+    <plurals name="eliminar_apuntes">
+        <item quantity="one">Delete the selected note?</item>
+        <item quantity="other">Delete the %d selected notes?</item>
+    </plurals>
+    <plurals name="apuntes_eliminados">
+        <item quantity="one">Note deleted</item>
+        <item quantity="other">%d notes deleted</item>
+    </plurals>
+    <!-- My notes (all subjects) -->
+    <string name="mis_apuntes">My notes</string>
+    <string name="mis_apuntes_sub">Notes from all your subjects</string>
+    <string name="buscar_apuntes">Search your notes</string>
+    <string name="sin_apuntes">You don\'t have notes yet.\nTap + to write the first one.</string>
+    <string name="sin_resultados">No notes match your search</string>
+    <!-- My grades (all subjects) -->
+    <string name="mis_notas">My grades</string>
+    <string name="mis_notas_sub">Grades from all your subjects</string>
+
+    <!-- Photo in notes (camera / gallery) -->
+    <string name="foto_apunte">Photo (optional)</string>
+    <string name="foto_apunte_cd">Note photo. Tap to view it full screen</string>
+    <string name="foto_camara">Take photo</string>
+    <string name="foto_otra">Take another</string>
+    <string name="foto_galeria">Gallery</string>
+    <string name="foto_procesando">Processing photo</string>
+    <string name="sin_app_camara">No camera app was found on this phone</string>
+    <string name="apunte_foto_titulo">Photo from %1$s</string>
+
+    <!-- Map: one pin per classroom -->
+    <string name="ubicacion_salon">Classroom location</string>
+    <string name="clases_aqui">%1$d classes here</string>
+    <string name="cual_materia">Which subject do you want to open?</string>
+    <string name="a_que_salon">Which classroom do you want to go to?</string>
+    <string name="lugar_n">Place %1$d</string>
+
+    <!-- Attachments in notes -->
+    <string name="archivos_apunte">Files (optional)</string>
+    <string name="archivo_adjuntar">Attach file</string>
+    <string name="archivo_limite">PDF, Word, PowerPoint, Excel, images… up to 5 MB each</string>
+    <string name="archivo_procesando">Uploading file</string>
+    <string name="archivo_quitar">Remove file</string>
+    <string name="archivo_abrir_cd">Open %1$s</string>
+    <string name="archivo_muy_grande">The file is larger than 5 MB. Choose a smaller one.</string>
+    <string name="archivo_error">Couldn\'t read the file</string>
+    <string name="archivo_no_disponible">Couldn\'t download the file. Check your connection.</string>
+    <string name="archivo_sin_app">There is no app on this phone to open this type of file</string>
+
+    <!-- Accessibility: what TalkBack reads on single-symbol buttons -->
+    <string name="volver">Back</string>
+    <string name="agregar">Add</string>
+    <string name="mes_anterior">Previous month</string>
+    <string name="mes_siguiente">Next month</string>
+    <string name="iniciando_sesion">Signing in…</string>
+    <!-- Calendar: what TalkBack reads for each day -->
+    <string name="cal_tiene">Has assignments</string>
+    <string name="cal_pendientes">pending</string>
+    <string name="cal_vencidas">overdue</string>
+    <string name="cal_completadas">done</string>
+    <!-- Notes list -->
+    <string name="con_foto">With photo</string>
+    <plurals name="n_archivos">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d files</item>
+    </plurals>
+    <!-- Notifications: the user chooses when to be reminded -->
+    <string name="aviso_primero">Remind me</string>
+    <string name="aviso_primero_sub">How long before the due date</string>
+    <string name="aviso_antes">%1$s before</string>
+    <string name="aviso_desactivado">Off</string>
+    <string name="aviso_personalizado">Custom…</string>
+    <string name="aviso_personalizado_valor">Custom: %1$s</string>
+    <string name="aviso_personalizado_msg">How long before the due date do you want the reminder?</string>
+    <string name="aviso_cantidad">Amount</string>
+    <string name="aviso_unidad">Time unit</string>
+    <string name="unidad_minutos">minutes</string>
+    <string name="unidad_horas">hours</string>
+    <string name="unidad_dias">days</string>
+    <string name="unidad_semanas">weeks</string>
+    <string name="guardar">Save</string>
+    <string name="recordatorio_entrega_en">Due in %1$s</string>
+    <string name="recordatorio_examen_en">Exam in %1$s</string>
+    <plurals name="minutos">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="horas">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="dias">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="semanas">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <string name="seleccionado">selected</string>
+    <string name="materia_cambiar">Which subject is it for?</string>
+    <string name="materia_cambiar_cd">Subject: %1$s. Tap to change it</string>
+    <string name="materia_elige">Choose the subject</string>
+    <string name="materia_elige_error">Choose which subject this note is for</string>
+    <string name="perfil_abrir">Open my profile</string>
+</resources>

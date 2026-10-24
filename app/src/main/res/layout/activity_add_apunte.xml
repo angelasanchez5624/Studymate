@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTituloPantalla"
+                    style="@style/App.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apunte_nuevo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tarjeta del formulario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Materia: se ve como un campo más; al tocarlo se elige otra -->
+            <TextView
+                style="@style/App.Label"
+                android:text="@string/materia"/>
+            <TextView
+                android:id="@+id/tvMateriaApunte"
+                style="@style/App.Input"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/apunte_titulo"/>
+            <EditText
+                android:id="@+id/etTituloApunte"
+                style="@style/App.Input"
+                android:hint="@string/apunte_titulo_hint"
+                android:inputType="textCapSentences"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/apunte_texto"/>
+            <!-- Texto largo: varias líneas, crece mientras escribes -->
+            <EditText
+                android:id="@+id/etTextoApunte"
+                style="@style/App.Input"
+                android:gravity="top|start"
+                android:hint="@string/apunte_texto_hint"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="1000"
+                android:minLines="8"
+                android:scrollbars="vertical"/>
+
+            <!-- Foto del apunte (tablero, cuaderno, diapositiva...) -->
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/foto_apunte"/>
+
+            <!-- Vista previa: se ve solo cuando el apunte tiene foto. Tocarla la abre en grande -->
+            <LinearLayout
+                android:id="@+id/cajaFotoApunte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFotoApunte"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="false"
+                    android:background="@color/border_soft"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/foto_apunte_cd"
+                    app:shapeAppearanceOverlay="@style/App.FotoRedondeada"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnQuitarFoto"
+                    app:icon="@drawable/ic_borrar"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/pink_text"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:minHeight="48dp"
+                    android:text="@string/foto_quitar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pink_text"
+                    android:fontFamily="@font/nunito_semibold"/>
+            </LinearLayout>
+
+            <!-- Botones: tomar foto con la cámara o elegir de la galería -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCamara"
+                    app:icon="@drawable/ic_camara"
+                    app:iconGravity="textStart"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/texto_acento"
+                    style="@style/App.Button.Outline"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/foto_camara"
+                    android:textSize="14sp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGaleria"
+                    app:icon="@drawable/ic_imagen"
+                    app:iconGravity="textStart"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/texto_acento"
+                    style="@style/App.Button.Outline"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:minHeight="48dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/foto_galeria"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Se ve mientras se procesa la foto -->
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresoFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:contentDescription="@string/foto_procesando"
+                app:indicatorColor="@color/boton"/>
+
+            <!-- Archivos adjuntos (PDF, Word, PowerPoint, Excel...) -->
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/archivos_apunte"/>
+            <LinearLayout
+                android:id="@+id/listArchivos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdjuntar"
+                app:icon="@drawable/ic_adjunto"
+                app:iconGravity="textStart"
+                app:iconSize="18dp"
+                app:iconTint="@color/texto_acento"
+                style="@style/App.Button.Outline"
+                android:layout_marginTop="8dp"
+                android:minHeight="48dp"
+                android:paddingVertical="12dp"
+                android:text="@string/archivo_adjuntar"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/archivo_limite"
+                android:textSize="12sp"
+                android:textColor="@color/text_label"
+                android:fontFamily="@font/nunito_regular"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progresoArchivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:contentDescription="@string/archivo_procesando"
+                app:indicatorColor="@color/boton"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarApunte"
+            style="@style/App.Button"
+            android:layout_marginTop="20dp"
+            android:text="@string/apunte_guardar"
+            android:textColor="@color/white"
+            android:outlineSpotShadowColor="#607563C0"
+            app:backgroundTint="@color/boton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelarApunte"
+            style="@style/App.Button.Outline"
+            android:layout_marginTop="12dp"
+            android:text="@string/cancelar"/>
+    </LinearLayout>
+</ScrollView>

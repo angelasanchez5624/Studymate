@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chip de filtro (Mis apuntes): píldora redondeada. El color se pone desde Java (SubjectColors.tint) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white"/>
+    <corners android:radius="24dp"/>
+</shape>

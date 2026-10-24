@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Configuración → Ayuda y soporte -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout style="@style/Ajustes.Content">
+
+        <LinearLayout style="@style/Ajustes.Header">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView style="@style/Ajustes.HeaderTitle" android:text="@string/ayuda_soporte"/>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/ayuda_sec_faq"/>
+
+        <!-- Las preguntas se agregan desde HelpActivity (strings: faq_preguntas / faq_respuestas) -->
+        <LinearLayout android:id="@+id/listaFaq" style="@style/Ajustes.Card"/>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/ayuda_sec_contacto"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout android:id="@+id/rowEscribir" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_blue"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_correo"
+                    android:tint="@color/icono_blue"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_escribir"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_escribir_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+            <View style="@style/Ajustes.Divider"/>
+            <LinearLayout android:id="@+id/rowReportar" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_pink"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_error"
+                    android:tint="@color/icono_pink"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_reportar"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_reportar_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+            <View style="@style/Ajustes.Divider"/>
+            <LinearLayout android:id="@+id/rowAcerca" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_mint"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_info"
+                    android:tint="@color/icono_mint"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_acerca"/>
+                    <TextView android:id="@+id/tvVersionAyuda" style="@style/Ajustes.RowSub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

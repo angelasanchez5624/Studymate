@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta de una tarea:
+     fila 1: casilla, nombre, tipo y prioridad
+     fila 2: materia y fecha de entrega (empiezan desde el borde, debajo de la casilla, para que quepan) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardTarea"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_card_18"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Checkbox 24x24, radio 8, borde 2 -->
+        <TextView
+            android:id="@+id/btnCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_check_off"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/text_main"/>
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/text_main"
+            android:fontFamily="@font/nunito_bold"/>
+        <!-- Tipo (Examen, Taller...). No se muestra si es una tarea normal -->
+        <TextView
+            android:id="@+id/tagTipo"
+            style="@style/App.Tag"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tagPrioridad"
+            style="@style/App.Tag"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Descripción (se oculta si está vacía), alineada con el nombre -->
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_muted"
+        android:fontFamily="@font/nunito_regular"/>
+
+    <!-- Materia + fecha en una sola fila. Si no caben, se acorta la materia (la fecha siempre completa) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:id="@+id/tagMateria"
+            style="@style/App.Tag"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tagEstado"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tagEstado"
+            style="@style/App.Tag"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tagMateria"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

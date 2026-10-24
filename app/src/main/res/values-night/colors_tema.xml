@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo oscuro: manchas decorativas y círculos de los íconos más suaves -->
+<resources>
+    <!-- Modo oscuro: los círculos del fondo son brillos de color suaves (lila, rosa, azul, menta) -->
+    <color name="blob_pink">#40C06080</color>
+    <color name="blob_mint">#333D9B76</color>
+    <color name="blob_lilac">#597563C0</color>
+    <color name="blob_blue">#405A95C8</color>
+    <color name="circulo_blanco">#1FFFFFFF</color>
+</resources>

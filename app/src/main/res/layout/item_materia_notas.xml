@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta de una materia en "Mis notas": nombre, promedio, lo que falta para pasar y sus notas -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_card_20"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Encabezado (al tocarlo se abre la materia) -->
+    <LinearLayout
+        android:id="@+id/cabMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvMateriaTag"
+                style="@style/App.Tag"/>
+            <TextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="13sp"
+                android:textColor="@color/text_label"
+                android:fontFamily="@font/nunito_semibold"/>
+            <TextView
+                android:id="@+id/tvEvaluado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvPromedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="28sp"
+            android:textColor="@color/text_main"
+            android:fontFamily="@font/nunito_extrabold"/>
+    </LinearLayout>
+
+    <!-- Notas de la materia -->
+    <LinearLayout
+        android:id="@+id/listNotasMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"/>
+</LinearLayout>

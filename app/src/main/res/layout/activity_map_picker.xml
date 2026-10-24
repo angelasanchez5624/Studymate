@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Elegir en el mapa (OpenStreetMap) dónde es la clase de una materia -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+        <ImageView
+            style="@style/App.BackButton"
+            android:id="@+id/btnAtras"
+            android:background="@drawable/bg_back_blue"/>
+        <TextView
+            style="@style/App.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/ubicacion_clase"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="12dp"
+        android:text="@string/mapa_instruccion"
+        android:textColor="@color/text_muted"
+        android:textSize="13sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!-- Botón para ir a donde estás -->
+        <TextView
+            android:id="@+id/btnMiUbicacion"
+            android:drawableStart="@drawable/ic_lugar"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/texto_acento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="4dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="@string/mi_ubicacion"
+            android:textColor="@color/text_main"
+            android:textSize="13sp"
+            android:fontFamily="@font/nunito_bold"/>
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuardarUbicacion"
+        style="@style/App.Button"
+        android:layout_margin="16dp"
+        android:text="@string/guardar_ubicacion"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/boton"/>
+</LinearLayout>

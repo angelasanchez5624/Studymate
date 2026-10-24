@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menú lateral (☰) de Perfil: cuenta, estadísticas y configuración.
+     Se incluye en activity_profile.xml y lo maneja MenuLateral.java -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Encabezado: foto, nombre y correo. Al tocarlo se edita el perfil -->
+        <LinearLayout
+            android:id="@+id/menuCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_profile_header"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="16dp">
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_avatar_border">
+                <ImageView
+                    android:id="@+id/tvAvatarEmojiMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_persona"
+                    android:padding="14dp"
+                    android:tint="@color/texto_acento"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:id="@+id/ivAvatarMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:contentDescription="@string/foto_perfil"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/tvNombreMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_main"
+                android:textSize="17sp"
+                android:fontFamily="@font/nunito_extrabold"/>
+            <TextView
+                android:id="@+id/tvCorreoMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_label"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_tag"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/editar_perfil"
+                android:textColor="@color/lilac_text"
+                android:textSize="11sp"
+                android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="28dp">
+
+            <TextView style="@style/Ajustes.Section" android:layout_marginTop="16dp" android:text="@string/sec_estadisticas"/>
+
+            <LinearLayout style="@style/Ajustes.Card">
+                <LinearLayout android:id="@+id/menuEstadisticas" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_mint"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_grafica"
+                        android:tint="@color/icono_mint"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_estadisticas_menu"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_estadisticas_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <!-- Todas las notas de todas las materias -->
+                <LinearLayout android:id="@+id/menuNotas" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_pink"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_escuela"
+                        android:tint="@color/icono_pink"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_notas"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_notas_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <!-- Todos los apuntes de todas las materias -->
+                <LinearLayout android:id="@+id/menuApuntes" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_yellow"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_documento"
+                        android:tint="@color/icono_yellow"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_apuntes"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_apuntes_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/Ajustes.Section" android:layout_marginTop="16dp" android:text="@string/sec_preferencias"/>
+
+            <LinearLayout style="@style/Ajustes.Card">
+                <LinearLayout android:id="@+id/menuNotificaciones" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_yellow"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_campana"
+                        android:tint="@color/icono_yellow"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/notificaciones"/>
+                        <TextView android:id="@+id/tvNotifEstado" style="@style/Ajustes.RowSub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <LinearLayout android:id="@+id/menuIdioma" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_blue"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_idioma"
+                        android:tint="@color/icono_blue"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/idioma"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvIdiomaActual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="90dp" android:ellipsize="end" android:maxLines="1" android:textColor="@color/texto_acento" android:textSize="12sp" android:fontFamily="@font/nunito_bold"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <!-- Tema: claro, oscuro o el del teléfono -->
+                <LinearLayout android:id="@+id/menuTema" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_lilac"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_luna"
+                        android:tint="@color/icono_lilac"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/tema"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvTemaActual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="90dp" android:ellipsize="end" android:maxLines="1" android:textColor="@color/texto_acento" android:textSize="12sp" android:fontFamily="@font/nunito_bold"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <LinearLayout style="@style/Ajustes.Row">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_mint"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_reloj"
+                        android:tint="@color/icono_mint"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/formato_24"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/formato_24_sub"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/swHora24" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/Ajustes.Section" android:layout_marginTop="16dp" android:text="@string/sec_privacidad_soporte"/>
+
+            <LinearLayout style="@style/Ajustes.Card">
+                <LinearLayout android:id="@+id/menuPrivacidad" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_lilac"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_candado"
+                        android:tint="@color/icono_lilac"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/privacidad"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/privacidad_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <LinearLayout android:id="@+id/menuAyuda" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_pink"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chat"
+                        android:tint="@color/icono_pink"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_soporte"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_soporte_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/Ajustes.Section" android:layout_marginTop="16dp" android:text="@string/sec_cuenta"/>
+
+            <LinearLayout style="@style/Ajustes.Card">
+                <LinearLayout android:id="@+id/menuCambiarClave" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_blue"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_llave"
+                        android:tint="@color/icono_blue"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:text="@string/cambiar_clave"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/cambiar_clave_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+                <View style="@style/Ajustes.Divider"/>
+                <LinearLayout android:id="@+id/menuEliminarCuenta" style="@style/Ajustes.Row.Click">
+                    <ImageView
+                        style="@style/Ajustes.Icon"
+                        android:background="@drawable/bg_icon_red"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_borrar"
+                        android:tint="@color/icono_red"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout style="@style/Ajustes.Texts">
+                        <TextView style="@style/Ajustes.RowTitle" android:textColor="@color/red_text" android:text="@string/eliminar_cuenta"/>
+                        <TextView style="@style/Ajustes.RowSub" android:text="@string/eliminar_cuenta_sub"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Ajustes.Chevron"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVersionMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

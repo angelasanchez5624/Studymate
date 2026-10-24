@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tareas vencidas / notas bajas -->
+    <color name="red_bg">#FAD9D9</color>
+    <color name="red_pastel">#F4A6A6</color>
+    <color name="red_text">#B23636</color>
+</resources>

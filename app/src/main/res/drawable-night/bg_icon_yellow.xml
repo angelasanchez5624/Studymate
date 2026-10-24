@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo oscuro: cuadrito pastel (como el logo) con el ícono en tono oscuro -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tile_yellow"/>
+    <corners android:radius="16dp"/>
+</shape>

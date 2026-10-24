@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/App.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mis_tareas"/>
+            <ImageView
+                style="@style/App.PlusButton"
+                android:id="@+id/btnAddTarea"/>
+        </LinearLayout>
+
+        <!-- Buscador: filtra por nombre, descripción o materia -->
+        <EditText
+            android:id="@+id/etBuscar"
+            android:drawableStart="@drawable/ic_buscar"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/text_label"
+            style="@style/App.Input"
+            android:layout_marginTop="16dp"
+            android:hint="@string/buscar_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <!-- Filtros: se activan desde Java (bg_filter_on / texto blanco) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btnFiltroTodas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_filter_off"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="@string/todas"
+                android:textSize="13sp"
+                android:textColor="@color/text_muted"
+                android:fontFamily="@font/nunito_bold"/>
+            <TextView
+                android:id="@+id/btnFiltroPendientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_filter_off"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="@string/pendientes"
+                android:textSize="13sp"
+                android:textColor="@color/text_muted"
+                android:fontFamily="@font/nunito_bold"/>
+            <TextView
+                android:id="@+id/btnFiltroCompletadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/bg_filter_off"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="@string/completadas"
+                android:textSize="13sp"
+                android:textColor="@color/text_muted"
+                android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <!-- Ordenar: texto pequeño a la derecha; al tocarlo se despliega Fecha / Materia / Prioridad -->
+        <LinearLayout
+            android:id="@+id/btnOrdenar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp"
+            android:paddingStart="8dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_ordenar"
+                android:tint="@color/text_muted"/>
+            <TextView
+                android:id="@+id/tvOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:fontFamily="@font/nunito_semibold"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTareas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvVacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/sin_tareas_categoria"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/view_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

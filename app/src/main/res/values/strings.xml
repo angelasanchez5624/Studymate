@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Textos en español (idioma por defecto). La traducción al inglés está en values-en/strings.xml -->
+<resources>
+    <string name="app_name">StudyMate</string>
+
+    <!-- Comunes -->
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="entendido">Entendido</string>
+    <string name="sin_nombre">Sin nombre</string>
+    <string name="error_conexion">No se pudo completar. Revisa tu conexión</string>
+
+    <!-- Barra inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_materias">Materias</string>
+    <string name="nav_tareas">Tareas</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <!-- Configuración (menú principal) -->
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="sec_preferencias">Preferencias</string>
+    <string name="sec_privacidad_soporte">Privacidad y soporte</string>
+    <string name="sec_cuenta">Cuenta</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="notif_activadas">Recordatorios activados</string>
+    <string name="notif_desactivadas">Recordatorios desactivados</string>
+    <string name="notif_sin_permiso">Sin permiso del teléfono</string>
+    <string name="idioma">Idioma</string>
+    <string name="formato_24">Formato de 24 horas</string>
+    <string name="formato_24_sub">Ej. 14:00 en vez de 2:00 p. m.</string>
+    <string name="formato_24_on">Horas en formato 24 h</string>
+    <string name="formato_24_off">Horas con a. m. / p. m.</string>
+    <string name="privacidad">Privacidad</string>
+    <string name="privacidad_sub">Tus datos y lo que se ve en las notificaciones</string>
+    <string name="ayuda_soporte">Ayuda y soporte</string>
+    <string name="ayuda_soporte_sub">Preguntas frecuentes y contacto</string>
+    <string name="cambiar_clave">Cambiar contraseña</string>
+    <string name="cambiar_clave_sub">Te enviamos un correo para cambiarla</string>
+    <string name="cambiar_clave_msg">Te enviaremos un enlace a %1$s para que escribas tu nueva contraseña.</string>
+    <string name="enviar">Enviar</string>
+    <string name="revisa_correo">Revisa tu correo</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="cerrar_sesion_msg">¿Seguro que quieres salir de tu cuenta?</string>
+    <string name="salir">Salir</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="eliminar_cuenta_sub">Borra tu cuenta y todos tus datos para siempre</string>
+    <string name="eliminar_cuenta_msg">Se borrarán tu perfil, materias, tareas y notas. Esto no se puede deshacer.\n\nEscribe tu contraseña para confirmar:</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="contrasena_hint">Escribe tu contraseña</string>
+    <string name="contrasena_nueva_hint">Mínimo 6 caracteres</string>
+    <string name="contrasena_repite_hint">Repite tu contraseña</string>
+    <string name="clave_incorrecta">Contraseña incorrecta</string>
+    <string name="eliminando">Eliminando cuenta…</string>
+    <string name="cuenta_eliminada">Tu cuenta fue eliminada</string>
+    <string name="version">StudyMate · versión %1$s</string>
+
+    <!-- Idioma -->
+    <string name="idioma_titulo">Elige el idioma</string>
+    <string name="idioma_sistema">Usar predeterminado del teléfono</string>
+    <string name="idioma_es">Español</string>
+    <string name="idioma_en">Inglés</string>
+
+    <!-- Notificaciones -->
+    <string name="notif_recordatorios">Recordatorios de entregas</string>
+    <string name="notif_recordatorios_sub">Avisos antes de que venza una tarea</string>
+    <string name="notif_dia">1 día antes</string>
+    <string name="notif_dia_sub">Te avisa el día anterior a la entrega</string>
+    <string name="notif_horas">2 horas antes</string>
+    <string name="notif_horas_sub">Te avisa poco antes de la hora de entrega</string>
+    <string name="notif_sec_avisos">Avisos</string>
+    <string name="notif_sec_telefono">En el teléfono</string>
+    <string name="notif_permisos">Sonido, vibración y permisos</string>
+    <string name="notif_permisos_sub">Ajustes de Android para StudyMate</string>
+    <string name="notif_banner">Las notificaciones están bloqueadas, así que no te llegarán los recordatorios.</string>
+    <string name="notif_permitir">Permitir notificaciones</string>
+    <string name="notif_generica_titulo">StudyMate</string>
+    <string name="notif_generica_texto">Tienes una entrega pendiente</string>
+
+    <!-- Privacidad -->
+    <string name="priv_sec_notif">Notificaciones</string>
+    <string name="priv_ocultar">Ocultar detalles en la pantalla de bloqueo</string>
+    <string name="priv_ocultar_sub">Solo se verá «Tienes una entrega pendiente»</string>
+    <string name="priv_sec_datos">Tus datos</string>
+    <string name="priv_que_datos">¿Qué datos guarda StudyMate?</string>
+    <string name="priv_que_datos_sub">Qué se guarda y dónde</string>
+    <string name="priv_que_datos_texto">• Tu correo y contraseña los maneja Firebase Authentication (la contraseña nunca la vemos).\n\n• Tu perfil (nombre, carrera, universidad, semestre y foto), tus materias, tareas y notas se guardan en Firebase Realtime Database, en un espacio que solo tu cuenta puede leer.\n\n• En el teléfono solo se guardan tus preferencias (recordatorios, formato de hora, idioma y tema) y una copia de los recordatorios para reprogramarlos si reinicias.\n\n• StudyMate no vende ni comparte tus datos con nadie.</string>
+    <string name="priv_politica">Política de privacidad</string>
+    <string name="priv_politica_sub">Cómo usamos tu información</string>
+    <string name="priv_politica_texto">StudyMate es una agenda académica creada como proyecto universitario.\n\n1. Qué recopilamos: solo lo que tú escribes en la app (perfil, materias, horarios, tareas y notas) y tu correo para iniciar sesión.\n\n2. Para qué: para mostrarte tu información en cualquier teléfono donde inicies sesión y para enviarte recordatorios de entregas.\n\n3. Con quién se comparte: con nadie. Los datos se almacenan en servicios de Google Firebase.\n\n4. Tus derechos: puedes editar tu perfil, borrar tus datos académicos o eliminar tu cuenta en cualquier momento desde el menú de Perfil.\n\n5. Contacto: escríbenos desde Ayuda y soporte.</string>
+    <string name="priv_sec_borrar">Borrar</string>
+    <string name="priv_borrar">Borrar mis datos académicos</string>
+    <string name="priv_borrar_sub">Materias, tareas y notas (tu cuenta se mantiene)</string>
+    <string name="priv_borrar_msg">Se borrarán todas tus materias, tareas y notas. Tu cuenta y tu perfil se mantienen. Esto no se puede deshacer.</string>
+    <string name="priv_borrar_ok">Borrar todo</string>
+    <string name="priv_borrado">Tus datos académicos fueron borrados</string>
+
+    <!-- Ayuda y soporte -->
+    <string name="ayuda_sec_faq">Preguntas frecuentes</string>
+    <string name="ayuda_sec_contacto">Contacto</string>
+    <string name="ayuda_escribir">Escribir a soporte</string>
+    <string name="ayuda_escribir_sub">Dudas, sugerencias o ideas</string>
+    <string name="ayuda_reportar">Reportar un problema</string>
+    <string name="ayuda_reportar_sub">Algo no funciona como debería</string>
+    <string name="ayuda_acerca">Acerca de StudyMate</string>
+    <string name="ayuda_acerca_texto">StudyMate %1$s\n\nTu agenda universitaria: organiza materias, horarios, tareas y notas en un solo lugar, con recordatorios para que no se te pase ninguna entrega.\n\nHecho con como proyecto universitario.</string>
+    <string name="ayuda_asunto_soporte">StudyMate · Soporte</string>
+    <string name="ayuda_asunto_problema">StudyMate · Reporte de problema</string>
+    <string name="ayuda_cuerpo_problema">Describe qué pasó y qué estabas haciendo:\n\n\n\n— Datos del teléfono (no los borres) —\nVersión de la app: %1$s\nAndroid: %2$s\nTeléfono: %3$s</string>
+    <string name="ayuda_sin_correo">No encontramos una app de correo. Escríbenos a %1$s</string>
+
+    <string-array name="faq_preguntas">
+        <item>¿Por qué no me llegan los recordatorios?</item>
+        <item>¿Cómo agrego una materia con su horario?</item>
+        <item>¿Cómo se calcula mi promedio?</item>
+        <item>¿Mis datos se pierden si cambio de teléfono?</item>
+        <item>¿Cómo cambio mi foto de perfil?</item>
+        <item>Olvidé mi contraseña, ¿qué hago?</item>
+    </string-array>
+    <string-array name="faq_respuestas">
+        <item>Revisa en Perfil → Menú → Notificaciones que los recordatorios estén activados y que el teléfono tenga permitidas las notificaciones. Algunos teléfonos con ahorro de batería retrasan los avisos unos minutos.</item>
+        <item>Ve a la pestaña Materias y toca el botón «+». Escribe el nombre y el docente, y agrega los días y horas de clase.</item>
+        <item>Dentro de cada materia registras tus notas con su porcentaje. StudyMate calcula el promedio ponderado de la materia en escala de 0 a 5 (se aprueba con 3.0).</item>
+        <item>No. Todo se guarda en tu cuenta en la nube: inicia sesión con el mismo correo en el otro teléfono y aparecerá tu información.</item>
+        <item>En la pestaña Perfil toca tu foto (o el emoji) y elige una imagen de tu galería. Tocándola de nuevo puedes cambiarla o quitarla.</item>
+        <item>En la pantalla de inicio de sesión toca «¿Olvidaste tu contraseña?» y te enviaremos un correo. Si ya iniciaste sesión, usa Perfil → Menú → Cambiar contraseña.</item>
+    </string-array>
+
+    <!-- ===== Textos de toda la app (pantallas, mensajes y avisos) ===== -->
+    <string name="nota_nueva">Nueva nota</string>
+    <string name="nota_nombre">Nombre de la evaluación</string>
+    <string name="nota_nombre_hint">Ej. Parcial 1</string>
+    <string name="nota_valor">Nota (0 a 5)</string>
+    <string name="nota_valor_hint">Ej. 4.2</string>
+    <string name="nota_peso">Porcentaje que vale (%)</string>
+    <string name="nota_peso_hint">Ej. 30</string>
+    <string name="nota_guardar">Guardar nota</string>
+    <string name="nota_eliminar">Eliminar nota</string>
+    <string name="materia_nueva">Nueva materia</string>
+    <string name="materia_nombre">Nombre de la materia</string>
+    <string name="materia_nombre_hint">Ej. Cálculo Diferencial</string>
+    <string name="profesor">Docente</string>
+    <string name="profesor_hint">Ej. Dra. Laura Gómez</string>
+    <string name="horario_agregar">+ Agregar otro horario</string>
+    <string name="materia_guardar">Guardar materia</string>
+    <string name="materia_eliminar">Eliminar materia</string>
+    <string name="tarea_nueva">Nueva tarea</string>
+    <string name="tarea_nombre">Nombre de la tarea</string>
+    <string name="tarea_nombre_hint">Ej. Tarea de integrales</string>
+    <string name="materia">Materia</string>
+    <string name="prioridad">Prioridad</string>
+    <string name="fecha_entrega">Fecha de entrega</string>
+    <string name="hora">Hora</string>
+    <string name="hora_hint">11:59 p. m.</string>
+    <string name="descripcion">Descripción</string>
+    <string name="descripcion_hint">Detalles de la tarea...</string>
+    <string name="tarea_guardar">Guardar tarea</string>
+    <string name="tarea_eliminar">Eliminar tarea</string>
+    <string name="calendario">Calendario</string>
+    <string name="cal_leyenda">• Pendiente ! Vencida ✓ Completada</string>
+    <string name="entregas_hoy">Entregas de hoy</string>
+    <string name="cal_sin_entregas">No hay entregas este día</string>
+    <string name="saludo_anonimo">Hola, estudiante</string>
+    <string name="resumen_hoy">Resumen de hoy</string>
+    <string name="clases">Clases</string>
+    <string name="pendientes">Pendientes</string>
+    <string name="completadas">Completadas</string>
+    <string name="tareas_pendientes">Tareas pendientes</string>
+    <string name="cambiar_foto">Cambiar foto</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="carrera">Carrera</string>
+    <string name="universidad">Universidad</string>
+    <string name="semestre">Semestre</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="lema">Tu agenda universitaria</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="correo_hint">estudiante@universidad.mx</string>
+    <string name="olvidaste">¿Olvidaste tu contraseña?</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="sin_cuenta">¿No tienes cuenta?</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="foto_perfil">Foto de perfil</string>
+    <string name="nombre_hint">Ana García Martínez</string>
+    <string name="correo_hint2">ana@universidad.mx</string>
+    <string name="confirmar_contrasena">Confirmar contraseña</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="ya_cuenta">¿Ya tienes cuenta?</string>
+    <string name="estadisticas">Estadísticas</string>
+    <string name="completadas_semana">Completadas por semana</string>
+    <string name="ultimas_semanas">Últimas 8 semanas (la barra oscura es esta semana)</string>
+    <string name="avance_materia">Avance por materia</string>
+    <string name="materia_mayus">MATERIA</string>
+    <string name="informacion">Información</string>
+    <string name="horario">Horario</string>
+    <string name="salon">Salón</string>
+    <string name="sin_tareas_ahora">Sin tareas por ahora</string>
+    <string name="calificaciones">Calificaciones</string>
+    <string name="promedio_ponderado">Promedio ponderado</string>
+    <string name="primera_nota">Toca + para agregar tu primera nota</string>
+    <string name="materia_editar">Editar materia</string>
+    <string name="mis_materias">Mis materias</string>
+    <string name="mis_tareas">Mis tareas</string>
+    <string name="buscar_hint">Buscar tarea o materia</string>
+    <string name="todas">Todas</string>
+    <string name="ordenar">Ordenar por</string>
+    <string name="orden_fecha">Fecha</string>
+    <string name="orden_materia">Materia</string>
+    <string name="sin_tareas_categoria">Sin tareas en esta categoría</string>
+    <string name="quitar">Quitar</string>
+    <string name="dias_clase">Días de clase</string>
+    <string name="dia_lun">Lun</string>
+    <string name="dia_mar">Mar</string>
+    <string name="dia_mie">Mié</string>
+    <string name="dia_jue">Jue</string>
+    <string name="dia_vie">Vie</string>
+    <string name="dia_sab">Sáb</string>
+    <string name="dia_dom">Dom</string>
+    <string name="hora_inicio">Hora de inicio</string>
+    <string name="hora_inicio_hint">8:00 a. m.</string>
+    <string name="hora_fin">Hora de fin</string>
+    <string name="hora_fin_hint">10:00 a. m.</string>
+    <string name="salon_hint">Ej. A-201</string>
+    <string name="sin_horario">Sin horario</string>
+    <string name="am">a. m.</string>
+    <string name="pm">p. m.</string>
+    <string name="retraso_min">%1$d min tarde</string>
+    <string name="retraso_hora">%1$d hora tarde</string>
+    <string name="retraso_horas">%1$d horas tarde</string>
+    <string name="retraso_dia">%1$d día tarde</string>
+    <string name="retraso_dias">%1$d días tarde</string>
+    <string name="prio_alta">Alta</string>
+    <string name="prio_media">Media</string>
+    <string name="prio_baja">Baja</string>
+    <string name="nota_sin">Aún no hay notas</string>
+    <string name="nota_aprobada">Materia aprobada con %1$s</string>
+    <string name="nota_reprobada">Nota final %1$s · no alcanzó para aprobar</string>
+    <string name="nota_asegurada">Ya aseguraste el %1$s con lo evaluado</string>
+    <string name="nota_imposible">Ya no alcanzas el %1$s con el %2$d%% restante</string>
+    <string name="nota_necesitas">Necesitas %1$s en el %2$d%% restante para aprobar</string>
+    <string name="sin_materia">Sin materia</string>
+    <string name="recordatorio_manana">Entrega mañana</string>
+    <string name="recordatorio_2h">Entrega en 2 horas</string>
+    <string name="canal_nombre">Entregas de tareas</string>
+    <string name="canal_desc">Avisos antes de la fecha de entrega</string>
+    <string name="formato_fecha_larga">EEEE, d \'de\' MMMM</string>
+    <string name="saludo">Hola, %1$s</string>
+    <string name="hoy">Hoy</string>
+    <string name="clase_terminada">Terminada</string>
+    <string name="clase_en_curso">En curso</string>
+    <string name="sin_materias_clases">Agrega tus materias para ver tus clases aquí</string>
+    <string name="sin_clases_hoy">Hoy no tienes clases</string>
+    <string name="vencida_fecha">Vencida %1$s</string>
+    <string name="entrega_tardia">Entrega tardía: %1$s</string>
+    <string name="sin_coincidencias">No hay tareas que coincidan con tu búsqueda</string>
+    <string name="entregada_tarde">Entregada %1$s</string>
+    <string name="completada">Completada</string>
+    <string name="vencida_tag">Vencida · %1$s</string>
+    <string name="horario_sin_definir">Horario sin definir</string>
+    <string name="sin_materias">Aún no tienes materias. Toca + para agregar una</string>
+    <string name="materias_n_1">%1$d materia este semestre</string>
+    <string name="materias_n">%1$d materias este semestre</string>
+    <string name="materia_nombre_error">Escribe el nombre de la materia</string>
+    <string name="hora_fin_error">Debe ser después de la hora de inicio</string>
+    <string name="cambios_guardados">Cambios guardados</string>
+    <string name="materia_guardada">Materia guardada</string>
+    <string name="horario_n">Horario %1$d</string>
+    <string name="eliminar_tareas_1">También se eliminará su %1$d tarea.</string>
+    <string name="eliminar_tareas_n">También se eliminarán sus %1$d tareas.</string>
+    <string name="eliminar_msg">¿Seguro que quieres eliminar «%1$s»?</string>
+    <string name="materia_eliminada">Materia eliminada</string>
+    <string name="primero_materia">Primero agrega una materia</string>
+    <string name="tarea_editar">Editar tarea</string>
+    <string name="tarea_nombre_error">Escribe el nombre de la tarea</string>
+    <string name="tarea_guardada">Tarea guardada</string>
+    <string name="no_deshacer">Esta acción no se puede deshacer.</string>
+    <string name="tarea_eliminada">Tarea eliminada</string>
+    <string name="nota_editar">Editar nota</string>
+    <string name="nota_nombre_error">Escribe el nombre de la evaluación</string>
+    <string name="nota_rango_error">Escribe una nota entre 0 y %1$s</string>
+    <string name="peso_error">El porcentaje debe estar entre 1 y 100</string>
+    <string name="peso_max_error">Ya tienes %1$s%% registrado; máximo puedes agregar %2$s%%</string>
+    <string name="nota_guardada">Nota guardada</string>
+    <string name="nota_eliminada">Nota eliminada</string>
+    <string name="entregas_del">Entregas del %1$s</string>
+    <string name="estado_vencida">Vencida: %1$s</string>
+    <string name="estado_entrega">Entrega: %1$s</string>
+    <string name="tareas_n">Tareas (%1$d)</string>
+    <string name="evaluado">Evaluado: %1$d%% de la materia · Acumulado: %2$s</string>
+    <string name="vale">Vale %1$d%%</string>
+    <string name="a_tiempo">A tiempo</string>
+    <string name="tardias">Tardías</string>
+    <string name="sin_tareas_registradas">Todavía no tienes tareas registradas</string>
+    <string name="correo_invalido">Escribe un correo válido</string>
+    <string name="min_6">Mínimo 6 caracteres</string>
+    <string name="correo_para_enlace">Escribe tu correo para enviarte el enlace</string>
+    <string name="enlace_enviado">Te enviamos un correo para restablecer tu contraseña</string>
+    <string name="sin_internet">Sin conexión a internet</string>
+    <string name="credenciales_mal">Correo o contraseña incorrectos</string>
+    <string name="error_generico">No se pudo completar la acción. Intenta de nuevo</string>
+    <string name="nombre_error">Escribe tu nombre</string>
+    <string name="claves_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="cuenta_sin_datos">Cuenta creada, pero no se guardaron tus datos</string>
+    <string name="cuenta_creada">Cuenta creada. Inicia sesión para continuar</string>
+    <string name="correo_registrado">Ese correo ya está registrado</string>
+    <string name="clave_debil">La contraseña es muy débil</string>
+    <string name="correo_no_valido">El correo no es válido</string>
+    <string name="error_crear_cuenta">No se pudo crear la cuenta. Intenta de nuevo</string>
+    <string name="semestre_elegir">Selecciona semestre</string>
+    <string name="perfil_guardado">Perfil guardado</string>
+    <string name="foto_cambiar">Cambiar foto</string>
+    <string name="foto_quitar">Quitar foto</string>
+    <string name="foto_subiendo">Subiendo foto...</string>
+    <string name="foto_error">No se pudo leer la imagen</string>
+    <string name="foto_ok">Foto actualizada</string>
+    <string-array name="meses">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+    <string-array name="semestres">
+        <item>1° Semestre</item>
+        <item>2° Semestre</item>
+        <item>3° Semestre</item>
+        <item>4° Semestre</item>
+        <item>5° Semestre</item>
+        <item>6° Semestre</item>
+        <item>7° Semestre</item>
+        <item>8° Semestre</item>
+        <item>9° Semestre</item>
+        <item>10° Semestre</item>
+    </string-array>
+
+    <!-- Menú ☰ -->
+    <string name="sec_estadisticas">Tu progreso</string>
+    <string name="mis_estadisticas_menu">Mis estadísticas</string>
+    <string name="mis_estadisticas_sub">Completadas, a tiempo y avance por materia</string>
+    <string name="menu_abrir">Abrir menú</string>
+
+    <!-- Inicio: próximas clases · Género del estudiante (al crear la cuenta) -->
+    <string name="proximas_clases">Próximas clases</string>
+    <string name="manana">Mañana</string>
+    <string name="sin_pendientes">No tienes tareas pendientes</string>
+    <string-array name="dias_largos">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string name="docente_nombre">Docente: %1$s</string>
+
+    <!-- Correcciones y funciones nuevas: cargando, tipo de tarea, avisos de clase, nota necesaria, tema -->
+    <string name="cargando">Cargando…</string>
+    <string name="tipo">Tipo</string>
+    <string name="formato_fecha_media">EEE, d MMM</string>
+    <string-array name="tipos_tarea">
+        <item>Tarea</item>
+        <item>Examen</item>
+        <item>Taller</item>
+        <item>Exposición</item>
+        <item>Proyecto</item>
+    </string-array>
+    <string name="promedio_general">Promedio general</string>
+    <string name="promedio_sin_notas">Aún no tienes notas registradas</string>
+    <string name="recordatorio_examen">Examen en 3 días</string>
+    <string name="clase_en_min">Clase en %1$d min</string>
+    <string name="notif_generica_clase">Tienes una clase pronto</string>
+    <string name="notif_sec_clases">Clases</string>
+    <string name="notif_clases">Recordatorio de clases</string>
+    <string name="notif_clases_sub">Te avisa antes de cada clase, con el salón</string>
+    <string name="notif_clases_min">Avisar antes</string>
+    <string name="min_antes">%1$d min antes</string>
+    <string name="tema">Tema</string>
+    <string name="tema_titulo">Elige el tema</string>
+    <string name="tema_sistema">Usar el del teléfono</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_oscuro">Oscuro</string>
+    <plurals name="promedio_materias">
+        <item quantity="one">De %d materia con notas</item>
+        <item quantity="other">De %d materias con notas</item>
+    </plurals>
+
+    <!-- Calendario: clases del día -->
+    <string name="clases_hoy_cal">Clases de hoy</string>
+    <string name="clases_del">Clases del %1$s %2$s</string>
+    <string name="cal_sin_clases">No tienes clases este día</string>
+    <string name="ver_calendario">Ver calendario ›</string>
+    <string name="ordenar_actual">Ordenar: %1$s ▾</string>
+    <string name="orden_prioridad">Prioridad</string>
+
+    <!-- Mapas (OpenStreetMap): ubicación de las clases -->
+    <string name="ubicacion_clase">Ubicación de la clase</string>
+    <string name="elegir_mapa">Elegir en el mapa</string>
+    <string name="ubicacion_marcada">Ubicación marcada · Cambiar</string>
+    <string name="mapa_instruccion">Toca el mapa para marcar dónde es la clase (salón, edificio o sede).</string>
+    <string name="guardar_ubicacion">Guardar ubicación</string>
+    <string name="mi_ubicacion">Mi ubicación</string>
+    <string name="marca_primero">Primero toca el mapa para marcar el lugar</string>
+    <string name="sin_permiso_ubicacion">Sin permiso de ubicación no podemos mostrar dónde estás</string>
+    <string name="buscando_ubicacion">Buscando tu ubicación…</string>
+    <string name="sin_app_mapas">No hay una app de mapas instalada</string>
+    <string name="como_llegar">Cómo llegar ›</string>
+    <string name="mapa_clases">Mapa de mis clases</string>
+    <string name="mapa_vacio">Ninguna materia tiene ubicación todavía. Márcala en cada horario (\"Ubicación del salón\") al crear o editar una materia.</string>
+
+    <!-- Nueva nota: vista previa mientras escribes -->
+    <string name="vista_llevas">Llevas %1$s acumulado</string>
+    <string name="vista_llevarias">Con esta nota llevarías %1$s acumulado</string>
+    <string name="vista_evaluado">Evaluado: %1$s%% de la materia</string>
+
+    <!-- Modo selección: borrar uno o varios -->
+    <plurals name="seleccionados">
+        <item quantity="one">%d seleccionado</item>
+        <item quantity="other">%d seleccionados</item>
+    </plurals>
+    <plurals name="notas_eliminadas">
+        <item quantity="one">Nota eliminada</item>
+        <item quantity="other">%d notas eliminadas</item>
+    </plurals>
+    <plurals name="materias_eliminadas">
+        <item quantity="one">Materia eliminada</item>
+        <item quantity="other">%d materias eliminadas</item>
+    </plurals>
+    <plurals name="tareas_eliminadas">
+        <item quantity="one">Tarea eliminada</item>
+        <item quantity="other">%d tareas eliminadas</item>
+    </plurals>
+    <plurals name="eliminar_notas">
+        <item quantity="one">¿Eliminar la nota seleccionada?</item>
+        <item quantity="other">¿Eliminar las %d notas seleccionadas?</item>
+    </plurals>
+    <plurals name="eliminar_materias">
+        <item quantity="one">¿Eliminar la materia seleccionada?</item>
+        <item quantity="other">¿Eliminar las %d materias seleccionadas?</item>
+    </plurals>
+    <plurals name="eliminar_tareas">
+        <item quantity="one">¿Eliminar la tarea seleccionada?</item>
+        <item quantity="other">¿Eliminar las %d tareas seleccionadas?</item>
+    </plurals>
+    <plurals name="permanente">
+        <item quantity="one">Se eliminará de forma permanente.</item>
+        <item quantity="other">Se eliminarán de forma permanente.</item>
+    </plurals>
+    <string name="saludo_cargando">Hola</string>
+    <string name="clases_titulo_hoy">Clases de hoy</string>
+    <string name="clases_titulo_manana">Clases de mañana</string>
+    <string name="clases_titulo_dia">Clases del %1$s</string>
+    <string name="que_agregar">¿Qué quieres hacer?</string>
+    <string name="calcular_nota">Calcular calificación</string>
+    <string name="calcular_elige_materia">¿De qué materia?</string>
+    <!-- Botón + del inicio: elegir materia -->
+    <string name="elegir_sin_materias">Primero agrega una materia.</string>
+    <!-- Apuntes de cada materia -->
+    <string name="apuntes">Apuntes</string>
+    <string name="apuntes_n">Apuntes (%1$d)</string>
+    <string name="apunte_nuevo">Nuevo apunte</string>
+    <string name="apunte_editar">Editar apunte</string>
+    <string name="apunte_titulo">Título</string>
+    <string name="apunte_titulo_hint">Ej. Clase del lunes</string>
+    <string name="apunte_texto">Apunte</string>
+    <string name="apunte_texto_hint">Escribe aquí tus apuntes…</string>
+    <string name="apunte_guardar">Guardar apunte</string>
+    <string name="apunte_guardado">Apunte guardado</string>
+    <string name="apunte_vacio_error">Escribe algo en el apunte</string>
+    <string name="apunte_eliminar">Eliminar apunte</string>
+    <string name="primer_apunte">Toca + para escribir tu primer apunte</string>
+    <plurals name="eliminar_apuntes">
+        <item quantity="one">¿Eliminar el apunte seleccionado?</item>
+        <item quantity="other">¿Eliminar los %d apuntes seleccionados?</item>
+    </plurals>
+    <plurals name="apuntes_eliminados">
+        <item quantity="one">Apunte eliminado</item>
+        <item quantity="other">%d apuntes eliminados</item>
+    </plurals>
+    <!-- Mis apuntes (todas las materias) -->
+    <string name="mis_apuntes">Mis apuntes</string>
+    <string name="mis_apuntes_sub">Los apuntes de todas tus materias</string>
+    <string name="buscar_apuntes">Buscar en tus apuntes</string>
+    <string name="sin_apuntes">Aún no tienes apuntes.\nToca + para escribir el primero.</string>
+    <string name="sin_resultados">No hay apuntes que coincidan con la búsqueda</string>
+    <!-- Mis notas (todas las materias) -->
+    <string name="mis_notas">Mis notas</string>
+    <string name="mis_notas_sub">Las calificaciones de todas tus materias</string>
+
+    <!-- Foto en los apuntes (cámara / galería) -->
+    <string name="foto_apunte">Foto (opcional)</string>
+    <string name="foto_apunte_cd">Foto del apunte. Toca para verla en grande</string>
+    <string name="foto_camara">Tomar foto</string>
+    <string name="foto_otra">Tomar otra</string>
+    <string name="foto_galeria">Galería</string>
+    <string name="foto_procesando">Procesando foto</string>
+    <string name="sin_app_camara">No se encontró una app de cámara en este teléfono</string>
+    <string name="apunte_foto_titulo">Foto del %1$s</string>
+
+    <!-- Mapa: un pin por salón -->
+    <string name="ubicacion_salon">Ubicación del salón</string>
+    <string name="clases_aqui">%1$d clases aquí</string>
+    <string name="cual_materia">¿Qué materia quieres abrir?</string>
+    <string name="a_que_salon">¿A qué salón quieres ir?</string>
+    <string name="lugar_n">Lugar %1$d</string>
+
+    <!-- Archivos adjuntos en los apuntes -->
+    <string name="archivos_apunte">Archivos (opcional)</string>
+    <string name="archivo_adjuntar">Adjuntar archivo</string>
+    <string name="archivo_limite">PDF, Word, PowerPoint, Excel, imágenes… máximo 5 MB cada uno</string>
+    <string name="archivo_procesando">Subiendo archivo</string>
+    <string name="archivo_quitar">Quitar archivo</string>
+    <string name="archivo_abrir_cd">Abrir %1$s</string>
+    <string name="archivo_muy_grande">El archivo pesa más de 5 MB. Elige uno más liviano.</string>
+    <string name="archivo_error">No se pudo leer el archivo</string>
+    <string name="archivo_no_disponible">No se pudo descargar el archivo. Revisa tu conexión.</string>
+    <string name="archivo_sin_app">No hay una app en el teléfono para abrir este tipo de archivo</string>
+
+    <!-- Accesibilidad: lo que lee TalkBack en los botones de un solo símbolo -->
+    <string name="volver">Volver</string>
+    <string name="agregar">Agregar</string>
+    <string name="mes_anterior">Mes anterior</string>
+    <string name="mes_siguiente">Mes siguiente</string>
+    <string name="iniciando_sesion">Iniciando sesión…</string>
+    <!-- Calendario: lo que lee TalkBack en cada día -->
+    <string name="cal_tiene">Tiene entregas</string>
+    <string name="cal_pendientes">pendientes</string>
+    <string name="cal_vencidas">vencidas</string>
+    <string name="cal_completadas">completadas</string>
+    <!-- Lista de apuntes -->
+    <string name="con_foto">Con foto</string>
+    <plurals name="n_archivos">
+        <item quantity="one">%d archivo</item>
+        <item quantity="other">%d archivos</item>
+    </plurals>
+    <!-- Notificaciones: el usuario elige cuándo le avisan -->
+    <string name="aviso_primero">Avisarme</string>
+    <string name="aviso_primero_sub">Cuánto antes de la entrega te avisa</string>
+    <string name="aviso_antes">%1$s antes</string>
+    <string name="aviso_desactivado">Desactivado</string>
+    <string name="aviso_personalizado">Personalizado…</string>
+    <string name="aviso_personalizado_valor">Personalizado: %1$s</string>
+    <string name="aviso_personalizado_msg">¿Cuánto antes de la entrega quieres el aviso?</string>
+    <string name="aviso_cantidad">Cantidad</string>
+    <string name="aviso_unidad">Unidad de tiempo</string>
+    <string name="unidad_minutos">minutos</string>
+    <string name="unidad_horas">horas</string>
+    <string name="unidad_dias">días</string>
+    <string name="unidad_semanas">semanas</string>
+    <string name="guardar">Guardar</string>
+    <string name="recordatorio_entrega_en">Entrega en %1$s</string>
+    <string name="recordatorio_examen_en">Examen en %1$s</string>
+    <plurals name="minutos">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="horas">
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+    <plurals name="dias">
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="semanas">
+        <item quantity="one">%d semana</item>
+        <item quantity="other">%d semanas</item>
+    </plurals>
+    <string name="seleccionado">seleccionado</string>
+    <string name="materia_cambiar">¿A qué materia pertenece?</string>
+    <string name="materia_cambiar_cd">Materia: %1$s. Toca para cambiarla</string>
+    <string name="materia_elige">Elige la materia</string>
+    <string name="materia_elige_error">Elige a qué materia pertenece el apunte</string>
+    <string name="perfil_abrir">Abrir mi perfil</string>
+</resources>

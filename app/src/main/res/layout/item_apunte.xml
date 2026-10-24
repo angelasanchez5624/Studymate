@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Un apunte: (materia), título, primeras líneas del texto y fecha -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_card_18"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <!-- Materia del apunte: solo se muestra en "Mis apuntes" -->
+    <TextView
+        android:id="@+id/tvMateriaTag"
+        style="@style/App.Tag"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvTituloApunte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        android:textColor="@color/text_main"
+        android:fontFamily="@font/nunito_bold"/>
+    <TextView
+        android:id="@+id/tvTextoApunte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="13sp"
+        android:textColor="@color/text_label"
+        android:fontFamily="@font/nunito_regular"/>
+    <TextView
+        android:id="@+id/tvFechaApunte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="11sp"
+        android:textColor="@color/text_muted"
+        android:fontFamily="@font/nunito_regular"/>
+</LinearLayout>

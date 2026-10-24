@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estadísticas: resumen, gráfica de completadas por semana y avance por materia -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView
+                style="@style/App.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/estadisticas"/>
+        </LinearLayout>
+
+        <!-- Tres tarjetas de resumen (se llenan desde Java) -->
+        <LinearLayout
+            android:id="@+id/filaResumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"/>
+
+        <!-- Promedio general de todas las materias con notas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_lilac"
+                android:importantForAccessibility="no"
+                android:padding="10dp"
+                android:src="@drawable/ic_escuela"
+                android:tint="@color/icono_lilac"
+                android:scaleType="fitCenter"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promedio_general"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_bold"/>
+                <TextView
+                    android:id="@+id/tvPromedioDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvPromedioGeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textColor="@color/text_main"
+                android:textSize="28sp"
+                android:fontFamily="@font/nunito_extrabold"/>
+        </LinearLayout>
+
+        <!-- Gráfica de barras -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                style="@style/App.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/completadas_semana"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/ultimas_semanas"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"/>
+            <LinearLayout
+                android:id="@+id/grafica"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="12dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"/>
+        </LinearLayout>
+
+        <!-- Avance por materia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                style="@style/App.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/avance_materia"/>
+            <LinearLayout
+                android:id="@+id/listMaterias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

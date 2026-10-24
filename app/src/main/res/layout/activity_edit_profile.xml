@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_pink"/>
+            <TextView
+                style="@style/App.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/editar_perfil"/>
+        </LinearLayout>
+
+        <!-- Avatar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <!-- Foto de perfil (o emoji si no hay). Al tocarla se elige una foto -->
+            <FrameLayout
+                android:id="@+id/avatarEditar"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_avatar_pink"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/tvAvatarEmojiEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_persona"
+                    android:padding="20dp"
+                    android:tint="@color/texto_acento"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:id="@+id/ivAvatarEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/foto_perfil"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+                <!-- Botoncito de cámara abajo a la derecha -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/bg_avatar_border"
+                    android:elevation="2dp"
+                    android:importantForAccessibility="no"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_camara"
+                    android:tint="@color/white"
+                    android:scaleType="fitCenter"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/btnCambiarFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/cambiar_foto"
+                android:textSize="13sp"
+                android:textColor="@color/texto_acento"
+                android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView style="@style/App.Label" android:text="@string/nombre_completo"/>
+            <EditText
+                android:id="@+id/etNombre"
+                style="@style/App.Input"
+                android:inputType="textPersonName|textCapWords"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/correo"/>
+            <EditText
+                android:id="@+id/etCorreo"
+                style="@style/App.Input"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/carrera"/>
+            <EditText
+                android:id="@+id/etCarrera"
+                style="@style/App.Input"
+                android:inputType="textCapWords"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/universidad"/>
+            <EditText
+                android:id="@+id/etUniversidad"
+                style="@style/App.Input"
+                android:inputType="textCapWords"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/semestre"/>
+            <!-- Lista desplegable con el mismo estilo de los campos de texto -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_normal">
+                <Spinner
+                    android:id="@+id/spSemestre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="@null"
+                    android:dropDownVerticalOffset="52dp"
+                    android:popupBackground="@drawable/bg_spinner_popup"
+                    android:popupElevation="6dp"
+                    android:spinnerMode="dropdown"/>
+                <!-- Flechita de lista -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_flecha_abajo"
+                    android:tint="@color/text_muted"
+                    android:scaleType="fitCenter"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarPerfil"
+            style="@style/App.Button"
+            android:layout_marginTop="20dp"
+            android:text="@string/guardar_cambios"
+            android:textColor="@color/white"
+            android:outlineSpotShadowColor="#607563C0"
+            app:backgroundTint="@color/boton"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView
+                android:id="@+id/tvTituloMateria"
+                style="@style/App.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/materia_nueva"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_20"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="0dp"
+                android:text="@string/materia_nombre"/>
+            <EditText
+                android:id="@+id/etNombreMateria"
+                style="@style/App.Input"
+                android:hint="@string/materia_nombre_hint"
+                android:inputType="textCapSentences"/>
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="20dp"
+                android:text="@string/profesor"/>
+            <EditText
+                android:id="@+id/etProfesor"
+                style="@style/App.Input"
+                android:hint="@string/profesor_hint"
+                android:inputType="textPersonName|textCapWords"/>
+
+            <!-- La ubicación en el mapa ahora va en cada horario (item_bloque.xml): cada salón tiene su pin -->
+            <!-- Aquí se agregan los horarios (cada uno es un item_bloque.xml) -->
+            <LinearLayout
+                android:id="@+id/listBloques"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/btnAgregarBloque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_filter_off"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="@string/horario_agregar"
+                android:textColor="@color/texto_acento"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardarMateria"
+            style="@style/App.Button"
+            android:layout_marginTop="20dp"
+            android:text="@string/materia_guardar"
+            android:textColor="@color/white"
+            android:outlineSpotShadowColor="#607563C0"
+            app:backgroundTint="@color/boton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelarMateria"
+            style="@style/App.Button.Outline"
+            android:layout_marginTop="12dp"
+            android:text="@string/cancelar"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo oscuro: los degradados terminan en tonos oscuros del mismo color (antes terminaban en pastel claro
+     y el texto claro no se leía). -->
+<resources>
+    <color name="tarjeta_azul_fin">#2B4566</color>
+    <color name="tarjeta_lila_fin">#3D3466</color>
+    <color name="tarjeta_rosa_fin">#553045</color>
+    <color name="tarjeta_menta_fin">#24493D</color>
+
+    <color name="encabezado_ini">#4A2C3E</color>
+    <color name="encabezado_fin">#3A3262</color>
+
+    <color name="banner_materia_ini">#3A3262</color>
+</resources>

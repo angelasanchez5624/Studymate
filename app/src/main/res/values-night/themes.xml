@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo oscuro: íconos de la barra de estado en blanco -->
+<resources>
+    <style name="Theme.StudyMate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/boton</item>
+        <item name="colorPrimaryVariant">@color/boton</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/boton</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Interruptores y casillas activados en lila fuerte (se distinguen con más de 3:1) -->
+        <item name="colorControlActivated">@color/boton</item>
+        <item name="android:windowBackground">@color/cream</item>
+        <item name="android:statusBarColor">@color/cream</item>
+        <item name="android:navigationBarColor">@color/cream</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textColorPrimary">@color/text_main</item>
+    </style>
+</resources>

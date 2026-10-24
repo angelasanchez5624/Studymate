@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carpetas que StudyMate comparte con otras apps:
+     camara/   → la app de cámara deja ahí la foto del apunte
+     adjuntos/ → copia de los archivos adjuntos para abrirlos con el lector de PDF, Word, etc. -->
+<paths>
+    <cache-path name="camara" path="camara/"/>
+    <cache-path name="adjuntos" path="adjuntos/"/>
+</paths>

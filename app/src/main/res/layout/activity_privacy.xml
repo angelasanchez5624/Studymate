@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Configuración → Privacidad -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout style="@style/Ajustes.Content">
+
+        <LinearLayout style="@style/Ajustes.Header">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView style="@style/Ajustes.HeaderTitle" android:text="@string/privacidad"/>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/priv_sec_notif"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout style="@style/Ajustes.Row">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_lilac"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_ocultar"
+                    android:tint="@color/icono_lilac"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_ocultar"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_ocultar_sub"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/swOcultarDetalle" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/priv_sec_datos"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout android:id="@+id/rowQueDatos" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_blue"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_carpeta"
+                    android:tint="@color/icono_blue"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_que_datos"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_que_datos_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+            <View style="@style/Ajustes.Divider"/>
+            <LinearLayout android:id="@+id/rowPolitica" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_mint"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_documento"
+                    android:tint="@color/icono_mint"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_politica"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_politica_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/priv_sec_borrar"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout android:id="@+id/rowBorrarDatos" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_red"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_borrar"
+                    android:tint="@color/icono_red"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:textColor="@color/red_text" android:text="@string/priv_borrar"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_borrar_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

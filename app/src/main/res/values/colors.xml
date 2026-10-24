@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- index.css -->
+    <color name="blue_pastel">#A8C8F0</color>
+    <color name="blue_pastel_dark">#7AAED6</color>
+    <color name="lilac_pastel">#C4B5E8</color>
+    <color name="pink_pastel">#F4B8C8</color>
+    <color name="mint_pastel">#B2E4D4</color>
+    <color name="yellow_pastel">#FDEEA0</color>
+    <color name="cream">#FAFAF7</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_main">#3A3A4A</color>
+    <color name="text_muted">#6B6B7D</color>
+    <color name="border_soft">#EDEDF0</color>
+
+    <!-- App.tsx: objeto colors -->
+    <color name="blue_bg">#D6E7FA</color>
+    <color name="blue_text">#336999</color>
+    <color name="lilac_bg">#E3DCF8</color>
+    <color name="lilac_text">#6551B5</color>
+    <color name="pink_bg">#FBDCE8</color>
+    <color name="pink_text">#A64263</color>
+    <color name="mint_bg">#D3F1E6</color>
+    <color name="mint_text">#2D7357</color>
+    <color name="yellow_bg">#FBEFC0</color>
+    <color name="yellow_text">#806619</color>
+
+    <!-- Otros usados en App.tsx -->
+    <color name="text_label">#5A5A6A</color>
+    <color name="text_hint">#6E6E80</color>
+    <color name="divider">#F0F0F5</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Accesibilidad (WCAG 2.2, contraste mínimo 4.5:1) -->
+    <!-- Fondo de los botones principales y del botón + (lila): el texto blanco encima da 4.88:1 -->
+    <color name="boton">#7563C0</color>
+    <!-- Texto lila (enlaces, pestaña activa, botones con borde): 4.67:1 sobre el fondo crema -->
+    <color name="texto_acento">#7563C0</color>
+
+    <!-- Cuadritos de ícono (Ajustes, Login...): fondo pastel y el ícono en un tono oscuro del mismo color (≥ 5.8:1) -->
+    <color name="icono_blue">#1D3A5F</color>
+    <color name="icono_lilac">#3B2C7A</color>
+    <color name="icono_mint">#1D4E3F</color>
+    <color name="icono_pink">#74213F</color>
+    <color name="icono_yellow">#5A4508</color>
+    <color name="icono_red">#701C1C</color>
+    <color name="tile_blue">#A8C8F0</color>
+    <color name="tile_lilac">#C4B5E8</color>
+    <color name="tile_mint">#B2E4D4</color>
+    <color name="tile_pink">#F4B8C8</color>
+    <color name="tile_yellow">#FDEEA0</color>
+    <color name="tile_red">#F4A6A6</color>
+    <!-- Fondo del logo (Login): siempre pastel, también en modo oscuro -->
+    <color name="logo_ini">#C4B5E8</color>
+    <color name="logo_fin">#F4B8C8</color>
+</resources>

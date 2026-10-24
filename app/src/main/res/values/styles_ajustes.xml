@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estilos de las filas de Configuración (Notificaciones, Privacidad, Ayuda…) -->
+<resources>
+    <!-- Tarjeta blanca que agrupa filas -->
+    <style name="Ajustes.Card" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card_20</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Título de cada grupo -->
+    <style name="Ajustes.Section" parent="App.SectionTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Fila (con o sin clic) -->
+    <style name="Ajustes.Row" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+    <style name="Ajustes.Row.Click">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Cuadrito de color con el emoji -->
+    <style name="Ajustes.Icon" parent="">
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">9dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/bg_icon_blue</item>
+    </style>
+
+    <!-- Columna de textos -->
+    <style name="Ajustes.Texts" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="Ajustes.RowTitle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+    <style name="Ajustes.RowSub" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Flechita › (ícono vectorial chevron_right) -->
+    <style name="Ajustes.Chevron" parent="">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:src">@drawable/ic_siguiente</item>
+        <item name="android:tint">@color/chevron</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <!-- Línea divisoria entre filas (empieza después del icono) -->
+    <style name="Ajustes.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">70dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!-- Encabezado: botón atrás + título -->
+    <style name="Ajustes.Header" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="Ajustes.HeaderTitle" parent="App.Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+    <!-- Contenedor de cada pantalla -->
+    <style name="Ajustes.Content" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">32dp</item>
+    </style>
+</resources>

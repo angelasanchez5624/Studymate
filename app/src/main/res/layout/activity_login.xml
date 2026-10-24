@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <!-- Burbujas decorativas (top:-40 right:-40 180px / top:60 left:-50 120px) -->
+    <View
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-40dp"
+        android:background="@drawable/bg_blob_blue"/>
+    <View
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="-50dp"
+        android:background="@drawable/bg_blob_lilac"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- px-8 py-6, contenido centrado verticalmente, gap-6 (24dp) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="24dp">
+
+            <!-- Logo + título -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
+
+                <!-- Logo de StudyMate: el mismo dibujo del ícono de la app (libro + birrete).
+                     La imagen mide 108dp y el cuadro 72dp: se ve el centro, igual que en el ícono. -->
+                <FrameLayout
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_logo"
+                    android:elevation="8dp"
+                    android:outlineSpotShadowColor="#607563C0"
+                    android:clipToOutline="true"
+                    android:importantForAccessibility="no">
+                    <ImageView
+                        android:layout_width="108dp"
+                        android:layout_height="108dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/logo_login"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/app_name"
+                    android:textSize="28sp"
+                    android:letterSpacing="-0.018"
+                    android:textColor="@color/text_main"
+                    android:fontFamily="@font/nunito_extrabold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/lema"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_muted"
+                    android:fontFamily="@font/nunito_medium"/>
+            </LinearLayout>
+
+            <!-- Fila de iconos: 52x52, radio 16, gap 16 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_icon_blue"
+                    android:importantForAccessibility="no"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_libro"
+                    android:tint="@color/icono_blue"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_icon_yellow"
+                    android:importantForAccessibility="no"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_editar"
+                    android:tint="@color/icono_yellow"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_icon_mint"
+                    android:importantForAccessibility="no"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_calendario"
+                    android:tint="@color/icono_mint"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="@string/bienvenido"
+                android:textSize="22sp"
+                android:textColor="@color/text_main"
+                android:fontFamily="@font/nunito_extrabold"/>
+
+            <!-- Campos (gap 16 entre ellos) -->
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="24dp"
+                android:text="@string/correo"/>
+            <EditText
+                android:id="@+id/etCorreo"
+                style="@style/App.Input"
+                android:hint="@string/correo_hint"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                style="@style/App.Label"
+                android:layout_marginTop="16dp"
+                android:text="@string/contrasena"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                app:endIconMode="password_toggle"
+                app:endIconDrawable="@drawable/ic_password_toggle"
+                app:endIconTint="@color/text_muted">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/App.Input"
+                    android:layout_marginTop="0dp"
+                    android:hint="@string/contrasena_hint"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Error del inicio de sesión: ⚠ + texto rojo debajo del campo (se oculta al escribir) -->
+            <TextView
+                android:id="@+id/tvErrorLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_alerta"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/red_text"
+                android:gravity="center_vertical"
+                android:accessibilityLiveRegion="polite"
+                android:textSize="13sp"
+                android:textColor="@color/red_text"
+                android:fontFamily="@font/nunito_bold"
+                android:visibility="gone"/>
+
+            <!-- Olvidaste (gap 24 - 8 = 16) -->
+            <TextView
+                android:id="@+id/tvOlvidaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp"
+                android:paddingHorizontal="4dp"
+                android:gravity="center_vertical|end"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/olvidaste"
+                android:textSize="13sp"
+                android:textColor="@color/texto_acento"
+                android:fontFamily="@font/nunito_semibold"/>
+
+            <!-- Botón: padding 14/20, radio 16, 16px bold, sombra -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingVertical="16dp"
+                android:text="@string/iniciar_sesion"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_bold"
+                android:elevation="6dp"
+                android:outlineSpotShadowColor="#607563C0"
+                app:backgroundTint="@color/boton"
+                app:cornerRadius="16dp"/>
+
+            <!-- Se ve mientras se inicia sesión (retroalimentación de carga) -->
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progresoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:contentDescription="@string/iniciando_sesion"
+                app:indicatorColor="@color/boton"
+                app:trackCornerRadius="4dp"/>
+
+            <!-- ¿No tienes cuenta? Crear cuenta -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sin_cuenta"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_muted"
+                    android:fontFamily="@font/nunito_regular"/>
+                <TextView
+                    android:id="@+id/tvCrearCuenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="4dp"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/crear_cuenta"
+                    android:textSize="14sp"
+                    android:textColor="@color/texto_acento"
+                    android:fontFamily="@font/nunito_bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

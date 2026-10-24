@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="check_border">#8E8EA0</color>
+    <color name="chevron">#8E8EA0</color>
+    <color name="lilac_dark">#9B8AD6</color>
+    <color name="white_a60">#60FFFFFF</color>
+    <color name="white_aEE">#EEFFFFFF</color>
+    <color name="white_acc">#CCFFFFFF</color>
+    <!-- Texto sobre botones pastel (lila / rosado). Es igual en modo claro y oscuro,
+         porque el fondo pastel del botón tampoco cambia; así siempre se lee. -->
+    <color name="lilac_on_pastel">#4E3D8F</color>
+    <color name="pink_on_pastel">#8E3355</color>
+</resources>

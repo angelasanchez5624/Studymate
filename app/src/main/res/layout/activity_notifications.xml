@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Configuración → Notificaciones -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout style="@style/Ajustes.Content">
+
+        <LinearLayout style="@style/Ajustes.Header">
+            <ImageView
+                style="@style/App.BackButton"
+                android:id="@+id/btnAtras"
+                android:background="@drawable/bg_back_blue"/>
+            <TextView style="@style/Ajustes.HeaderTitle" android:text="@string/notificaciones"/>
+        </LinearLayout>
+
+        <!-- Aviso amarillo: solo se ve si Android tiene bloqueadas las notificaciones -->
+        <LinearLayout
+            android:id="@+id/bannerPermiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_banner_aviso"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notif_banner"
+                android:textColor="@color/yellow_text"
+                android:textSize="13sp"
+                android:fontFamily="@font/nunito_semibold"/>
+            <TextView
+                android:id="@+id/btnPermitir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_small"
+                android:minHeight="48dp"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="@string/notif_permitir"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/notif_sec_avisos"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout style="@style/Ajustes.Row">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_yellow"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_campana"
+                    android:tint="@color/icono_yellow"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_recordatorios"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/notif_recordatorios_sub"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/swRecordatorios" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View style="@style/Ajustes.Divider"/>
+            <!-- Cuándo avisar: abre una lista para elegir (o "Personalizado…") -->
+            <LinearLayout android:id="@+id/filaAviso1" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_blue"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_campana"
+                    android:tint="@color/icono_blue"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/aviso_primero"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/aviso_primero_sub"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAviso1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/texto_acento" android:textSize="13sp" android:fontFamily="@font/nunito_bold"/>
+                <ImageView style="@style/Ajustes.Chevron" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Avisos antes de cada clase -->
+        <TextView style="@style/Ajustes.Section" android:text="@string/notif_sec_clases"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout style="@style/Ajustes.Row">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_mint"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_universidad"
+                    android:tint="@color/icono_mint"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_clases"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/notif_clases_sub"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/swClases" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View style="@style/Ajustes.Divider"/>
+            <LinearLayout android:id="@+id/filaMinClases" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_yellow"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_reloj"
+                    android:tint="@color/icono_yellow"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_clases_min"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvMinClases" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/texto_acento" android:textSize="13sp" android:fontFamily="@font/nunito_bold"/>
+                <ImageView style="@style/Ajustes.Chevron" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/Ajustes.Section" android:text="@string/notif_sec_telefono"/>
+
+        <LinearLayout style="@style/Ajustes.Card">
+            <LinearLayout android:id="@+id/btnPermisoNotif" style="@style/Ajustes.Row.Click">
+                <ImageView
+                    style="@style/Ajustes.Icon"
+                    android:background="@drawable/bg_icon_pink"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_ajustes"
+                    android:tint="@color/icono_pink"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout style="@style/Ajustes.Texts">
+                    <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_permisos"/>
+                    <TextView style="@style/Ajustes.RowSub" android:text="@string/notif_permisos_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Ajustes.Chevron"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Título de pantalla: 22px / 800 -->
+    <style name="App.Title" parent="">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:fontFamily">@font/nunito_extrabold</item>
+    </style>
+
+    <!-- Título de sección: 16px / 800 -->
+    <style name="App.SectionTitle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:fontFamily">@font/nunito_extrabold</item>
+    </style>
+
+    <!-- Botón "+" 36x36 -->
+    <!-- Accesibilidad: 48dp es el área táctil mínima (WCAG 2.5.8) -->
+    <style name="App.PlusButton" parent="">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:contentDescription">@string/agregar</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">@drawable/bg_btn_small</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:src">@drawable/ic_agregar</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <!-- Botón atrás 36x36 -->
+    <style name="App.BackButton" parent="">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:contentDescription">@string/volver</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:src">@drawable/ic_volver</item>
+        <item name="android:tint">@color/text_main</item>
+    </style>
+
+    <!-- Etiqueta (tag): padding 3/10, radio 20, 11px / 700 -->
+    <style name="App.Tag" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_tag</item>
+        <item name="android:paddingHorizontal">12dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+
+    <!-- Botón principal: padding 14, radio 16, 16px / 700 -->
+    <style name="App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:elevation">6dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <!-- Botón con borde -->
+    <style name="App.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/texto_acento</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="strokeColor">@color/lilac_pastel</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <!-- Esquinas redondeadas para la foto de los apuntes -->
+    <style name="App.FotoRedondeada" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+</resources>
