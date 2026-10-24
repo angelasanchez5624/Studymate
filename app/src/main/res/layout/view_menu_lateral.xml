@@ -2,6 +2,7 @@
 <!-- Menú lateral (☰) de Perfil: cuenta, estadísticas y configuración.
      Se incluye en activity_profile.xml y lo maneja MenuLateral.java -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="match_parent"
     android:background="@color/cream"
@@ -37,7 +38,7 @@
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_persona"
                     android:padding="14dp"
-                    android:tint="@color/texto_acento"
+                    app:tint="@color/texto_acento"
                     android:scaleType="fitCenter"/>
                 <ImageView
                     android:id="@+id/ivAvatarMenu"
@@ -95,13 +96,14 @@
                         android:background="@drawable/bg_icon_mint"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_grafica"
-                        android:tint="@color/icono_mint"
+                        app:tint="@color/icono_mint"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_estadisticas_menu"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_estadisticas_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
                 <View style="@style/Ajustes.Divider"/>
                 <!-- Todas las notas de todas las materias -->
@@ -111,13 +113,14 @@
                         android:background="@drawable/bg_icon_pink"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_escuela"
-                        android:tint="@color/icono_pink"
+                        app:tint="@color/icono_pink"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_notas"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_notas_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
                 <View style="@style/Ajustes.Divider"/>
                 <!-- Todos los apuntes de todas las materias -->
@@ -127,13 +130,14 @@
                         android:background="@drawable/bg_icon_yellow"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_documento"
-                        android:tint="@color/icono_yellow"
+                        app:tint="@color/icono_yellow"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/mis_apuntes"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/mis_apuntes_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -146,13 +150,14 @@
                         android:background="@drawable/bg_icon_yellow"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_campana"
-                        android:tint="@color/icono_yellow"
+                        app:tint="@color/icono_yellow"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/notificaciones"/>
                         <TextView android:id="@+id/tvNotifEstado" style="@style/Ajustes.RowSub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
                 <View style="@style/Ajustes.Divider"/>
                 <LinearLayout android:id="@+id/menuIdioma" style="@style/Ajustes.Row.Click">
@@ -161,7 +166,7 @@
                         android:background="@drawable/bg_icon_blue"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_idioma"
-                        android:tint="@color/icono_blue"
+                        app:tint="@color/icono_blue"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/idioma"/>
@@ -176,7 +181,7 @@
                         android:background="@drawable/bg_icon_lilac"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_luna"
-                        android:tint="@color/icono_lilac"
+                        app:tint="@color/icono_lilac"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/tema"/>
@@ -190,7 +195,7 @@
                         android:background="@drawable/bg_icon_mint"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_reloj"
-                        android:tint="@color/icono_mint"
+                        app:tint="@color/icono_mint"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/formato_24"/>
@@ -209,13 +214,14 @@
                         android:background="@drawable/bg_icon_lilac"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_candado"
-                        android:tint="@color/icono_lilac"
+                        app:tint="@color/icono_lilac"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/privacidad"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/privacidad_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
                 <View style="@style/Ajustes.Divider"/>
                 <LinearLayout android:id="@+id/menuAyuda" style="@style/Ajustes.Row.Click">
@@ -224,13 +230,14 @@
                         android:background="@drawable/bg_icon_pink"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_chat"
-                        android:tint="@color/icono_pink"
+                        app:tint="@color/icono_pink"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_soporte"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_soporte_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -243,13 +250,14 @@
                         android:background="@drawable/bg_icon_blue"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_llave"
-                        android:tint="@color/icono_blue"
+                        app:tint="@color/icono_blue"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:text="@string/cambiar_clave"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/cambiar_clave_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
                 <View style="@style/Ajustes.Divider"/>
                 <LinearLayout android:id="@+id/menuEliminarCuenta" style="@style/Ajustes.Row.Click">
@@ -258,13 +266,14 @@
                         android:background="@drawable/bg_icon_red"
                         android:importantForAccessibility="no"
                         android:src="@drawable/ic_borrar"
-                        android:tint="@color/icono_red"
+                        app:tint="@color/icono_red"
                         android:scaleType="fitCenter"/>
                     <LinearLayout style="@style/Ajustes.Texts">
                         <TextView style="@style/Ajustes.RowTitle" android:textColor="@color/red_text" android:text="@string/eliminar_cuenta"/>
                         <TextView style="@style/Ajustes.RowSub" android:text="@string/eliminar_cuenta_sub"/>
                     </LinearLayout>
-                    <ImageView style="@style/Ajustes.Chevron"/>
+                    <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
                 </LinearLayout>
             </LinearLayout>
 

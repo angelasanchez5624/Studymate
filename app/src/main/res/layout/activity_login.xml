@@ -96,7 +96,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_libro"
-                    android:tint="@color/icono_blue"
+                    app:tint="@color/icono_blue"
                     android:scaleType="fitCenter"/>
                 <ImageView
                     android:layout_width="52dp"
@@ -106,7 +106,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_editar"
-                    android:tint="@color/icono_yellow"
+                    app:tint="@color/icono_yellow"
                     android:scaleType="fitCenter"/>
                 <ImageView
                     android:layout_width="52dp"
@@ -116,7 +116,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_calendario"
-                    android:tint="@color/icono_mint"
+                    app:tint="@color/icono_mint"
                     android:scaleType="fitCenter"/>
             </LinearLayout>
 

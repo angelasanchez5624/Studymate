@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- DrawerLayout: la pantalla de Inicio + el menú lateral (☰), el mismo de Perfil -->
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawerInicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -50,7 +51,7 @@
                         android:focusable="true"
                         android:padding="12dp"
                         android:src="@drawable/ic_menu"
-                        android:tint="@color/texto_acento"
+                        app:tint="@color/texto_acento"
                         android:scaleType="fitCenter"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,7 +105,7 @@
                             android:importantForAccessibility="no"
                             android:src="@drawable/ic_persona"
                             android:padding="12dp"
-                            android:tint="@color/texto_acento"
+                            app:tint="@color/texto_acento"
                             android:scaleType="fitCenter"/>
                         <ImageView
                             android:id="@+id/ivAvatarHeader"
@@ -151,7 +152,7 @@
                         android:importantForAccessibility="no"
                         android:padding="10dp"
                         android:src="@drawable/ic_libro"
-                        android:tint="@color/texto_acento"
+                        app:tint="@color/texto_acento"
                         android:scaleType="fitCenter"/>
                     <TextView
                         android:id="@+id/tvClases"
@@ -200,7 +201,7 @@
                         android:importantForAccessibility="no"
                         android:padding="10dp"
                         android:src="@drawable/ic_pendientes"
-                        android:tint="@color/texto_acento"
+                        app:tint="@color/texto_acento"
                         android:scaleType="fitCenter"/>
                     <TextView
                         android:id="@+id/tvPendientes"
@@ -249,7 +250,7 @@
                         android:importantForAccessibility="no"
                         android:padding="10dp"
                         android:src="@drawable/ic_hecho"
-                        android:tint="@color/texto_acento"
+                        app:tint="@color/texto_acento"
                         android:scaleType="fitCenter"/>
                     <TextView
                         android:id="@+id/tvCompletadas"
@@ -356,7 +357,7 @@
         android:outlineSpotShadowColor="#707563C0"
         android:padding="16dp"
         android:src="@drawable/ic_agregar"
-        android:tint="@color/white"/>
+        app:tint="@color/white"/>
 </FrameLayout>
 
     <!-- Menú lateral -->

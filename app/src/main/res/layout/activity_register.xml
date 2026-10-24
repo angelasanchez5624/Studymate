@@ -47,7 +47,7 @@
                     android:contentDescription="@string/volver"
                     android:padding="12dp"
                     android:src="@drawable/ic_volver"
-                    android:tint="@color/text_main"
+                    app:tint="@color/text_main"
                     android:scaleType="fitCenter"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_editar"
-                    android:tint="@color/icono_lilac"
+                    app:tint="@color/icono_lilac"
                     android:scaleType="fitCenter"/>
                 <ImageView
                     android:layout_width="52dp"
@@ -83,7 +83,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_escuela"
-                    android:tint="@color/icono_pink"
+                    app:tint="@color/icono_pink"
                     android:scaleType="fitCenter"/>
                 <ImageView
                     android:layout_width="52dp"
@@ -93,7 +93,7 @@
                     android:importantForAccessibility="no"
                     android:padding="14dp"
                     android:src="@drawable/ic_estrella"
-                    android:tint="@color/icono_yellow"
+                    app:tint="@color/icono_yellow"
                     android:scaleType="fitCenter"/>
             </LinearLayout>
 

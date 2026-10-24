@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Configuración → Ayuda y soporte -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
@@ -29,13 +30,14 @@
                     android:background="@drawable/bg_icon_blue"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_correo"
-                    android:tint="@color/icono_blue"
+                    app:tint="@color/icono_blue"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_escribir"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_escribir_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
             <View style="@style/Ajustes.Divider"/>
             <LinearLayout android:id="@+id/rowReportar" style="@style/Ajustes.Row.Click">
@@ -44,13 +46,14 @@
                     android:background="@drawable/bg_icon_pink"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_error"
-                    android:tint="@color/icono_pink"
+                    app:tint="@color/icono_pink"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_reportar"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/ayuda_reportar_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
             <View style="@style/Ajustes.Divider"/>
             <LinearLayout android:id="@+id/rowAcerca" style="@style/Ajustes.Row.Click">
@@ -59,13 +62,14 @@
                     android:background="@drawable/bg_icon_mint"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_info"
-                    android:tint="@color/icono_mint"
+                    app:tint="@color/icono_mint"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/ayuda_acerca"/>
                     <TextView android:id="@+id/tvVersionAyuda" style="@style/Ajustes.RowSub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

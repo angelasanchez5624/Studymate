@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Configuración → Notificaciones -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
@@ -57,7 +58,7 @@
                     android:background="@drawable/bg_icon_yellow"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_campana"
-                    android:tint="@color/icono_yellow"
+                    app:tint="@color/icono_yellow"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_recordatorios"/>
@@ -73,14 +74,15 @@
                     android:background="@drawable/bg_icon_blue"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_campana"
-                    android:tint="@color/icono_blue"
+                    app:tint="@color/icono_blue"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/aviso_primero"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/aviso_primero_sub"/>
                 </LinearLayout>
                 <TextView android:id="@+id/tvAviso1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/texto_acento" android:textSize="13sp" android:fontFamily="@font/nunito_bold"/>
-                <ImageView style="@style/Ajustes.Chevron" android:layout_marginStart="8dp"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no" android:layout_marginStart="8dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -94,7 +96,7 @@
                     android:background="@drawable/bg_icon_mint"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_universidad"
-                    android:tint="@color/icono_mint"
+                    app:tint="@color/icono_mint"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_clases"/>
@@ -109,13 +111,14 @@
                     android:background="@drawable/bg_icon_yellow"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_reloj"
-                    android:tint="@color/icono_yellow"
+                    app:tint="@color/icono_yellow"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_clases_min"/>
                 </LinearLayout>
                 <TextView android:id="@+id/tvMinClases" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/texto_acento" android:textSize="13sp" android:fontFamily="@font/nunito_bold"/>
-                <ImageView style="@style/Ajustes.Chevron" android:layout_marginStart="8dp"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no" android:layout_marginStart="8dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -128,13 +131,14 @@
                     android:background="@drawable/bg_icon_pink"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_ajustes"
-                    android:tint="@color/icono_pink"
+                    app:tint="@color/icono_pink"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/notif_permisos"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/notif_permisos_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

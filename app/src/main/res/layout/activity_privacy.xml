@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Configuración → Privacidad -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
@@ -24,7 +25,7 @@
                     android:background="@drawable/bg_icon_lilac"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_ocultar"
-                    android:tint="@color/icono_lilac"
+                    app:tint="@color/icono_lilac"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_ocultar"/>
@@ -43,13 +44,14 @@
                     android:background="@drawable/bg_icon_blue"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_carpeta"
-                    android:tint="@color/icono_blue"
+                    app:tint="@color/icono_blue"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_que_datos"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_que_datos_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
             <View style="@style/Ajustes.Divider"/>
             <LinearLayout android:id="@+id/rowPolitica" style="@style/Ajustes.Row.Click">
@@ -58,13 +60,14 @@
                     android:background="@drawable/bg_icon_mint"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_documento"
-                    android:tint="@color/icono_mint"
+                    app:tint="@color/icono_mint"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:text="@string/priv_politica"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_politica_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -77,13 +80,14 @@
                     android:background="@drawable/bg_icon_red"
                     android:importantForAccessibility="no"
                     android:src="@drawable/ic_borrar"
-                    android:tint="@color/icono_red"
+                    app:tint="@color/icono_red"
                     android:scaleType="fitCenter"/>
                 <LinearLayout style="@style/Ajustes.Texts">
                     <TextView style="@style/Ajustes.RowTitle" android:textColor="@color/red_text" android:text="@string/priv_borrar"/>
                     <TextView style="@style/Ajustes.RowSub" android:text="@string/priv_borrar_sub"/>
                 </LinearLayout>
-                <ImageView style="@style/Ajustes.Chevron"/>
+                <ImageView style="@style/Ajustes.Chevron"
+                    android:importantForAccessibility="no"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

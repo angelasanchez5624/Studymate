@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Estadísticas: resumen, gráfica de completadas por semana y avance por materia -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
@@ -54,7 +55,7 @@
                 android:importantForAccessibility="no"
                 android:padding="10dp"
                 android:src="@drawable/ic_escuela"
-                android:tint="@color/icono_lilac"
+                app:tint="@color/icono_lilac"
                 android:scaleType="fitCenter"/>
             <LinearLayout
                 android:layout_width="0dp"

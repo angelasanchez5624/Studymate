@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Una pregunta frecuente: al tocarla se muestra / oculta la respuesta -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
@@ -29,7 +30,7 @@
             android:layout_height="24dp"
             android:layout_marginStart="12dp"
             android:src="@drawable/ic_siguiente"
-            android:tint="@color/chevron"
+            app:tint="@color/chevron"
             android:scaleType="fitCenter"
             android:importantForAccessibility="no"/>
     </LinearLayout>

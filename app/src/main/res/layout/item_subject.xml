@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardMateria"
     android:foreground="?attr/selectableItemBackground"
     android:layout_width="match_parent"
@@ -21,7 +22,7 @@
         android:importantForAccessibility="no"
         android:padding="13dp"
         android:src="@drawable/ic_libro"
-        android:tint="@color/text_label"
+        app:tint="@color/text_label"
         android:scaleType="fitCenter"/>
 
     <LinearLayout
@@ -66,7 +67,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/ic_siguiente"
-        android:tint="@color/chevron"
+        app:tint="@color/chevron"
         android:scaleType="fitCenter"
         android:importantForAccessibility="no"/>
 </LinearLayout>

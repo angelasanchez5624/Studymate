@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:foreground="?attr/selectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +21,7 @@
         android:importantForAccessibility="no"
         android:padding="10dp"
         android:src="@drawable/ic_libro"
-        android:tint="@color/text_label"
+        app:tint="@color/text_label"
         android:scaleType="fitCenter"/>
 
     <LinearLayout
