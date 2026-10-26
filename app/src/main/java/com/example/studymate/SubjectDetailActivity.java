@@ -107,9 +107,13 @@ public class SubjectDetailActivity extends AppCompatActivity {
             }
             String[] opciones = new String[lugares.size()];
             for (int i = 0; i < opciones.length; i++) {
-                java.util.List<String> lineas = lugares.get(i).lineas;
-                opciones[i] = lineas.isEmpty() ? getString(R.string.lugar_n, i + 1)
-                        : android.text.TextUtils.join("\n", lineas);
+                Mapa.Lugar l = lugares.get(i);
+                // "AULA 112\nLun 8:00–10:00": el salón arriba y sus horarios debajo
+                java.util.List<String> partes = new java.util.ArrayList<>();
+                for (String sal : l.salones) if (!sal.isEmpty() && !partes.contains(sal)) partes.add(sal);
+                for (String li : l.lineas) if (!li.isEmpty()) partes.add(li);
+                opciones[i] = partes.isEmpty() ? getString(R.string.lugar_n, i + 1)
+                        : android.text.TextUtils.join("\n", partes);
             }
             new androidx.appcompat.app.AlertDialog.Builder(this)
                     .setTitle(R.string.a_que_salon)
