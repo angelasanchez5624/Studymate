@@ -573,10 +573,4 @@
     <string name="ley_pendiente">Pending</string>
     <string name="ley_vencida">Overdue</string>
     <string name="ley_completada">Completed</string>
-    <string name="ruta_titulo">Directions</string>
-    <string name="ruta_calculando">Calculating route…</string>
-    <string name="ruta_a_pie">%1$d min walk · %2$s</string>
-    <string name="ruta_aproximada">Approximate straight-line route · %1$s (could not calculate the path)</string>
-    <string name="ruta_sin_permiso">Turn on location to see the route from where you are</string>
-    <string name="ruta_recalcular">Recalculate route from my location</string>
 </resources>

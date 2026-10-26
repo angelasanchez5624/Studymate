@@ -581,10 +581,4 @@
     <string name="materia_elige">Elige la materia</string>
     <string name="materia_elige_error">Elige a qué materia pertenece el apunte</string>
     <string name="perfil_abrir">Abrir mi perfil</string>
-    <string name="ruta_titulo">Cómo llegar</string>
-    <string name="ruta_calculando">Calculando la ruta…</string>
-    <string name="ruta_a_pie">%1$d min a pie · %2$s</string>
-    <string name="ruta_aproximada">Ruta aproximada en línea recta · %1$s (no se pudo calcular el camino)</string>
-    <string name="ruta_sin_permiso">Activa la ubicación para ver la ruta desde donde estás</string>
-    <string name="ruta_recalcular">Recalcular la ruta desde mi ubicación</string>
 </resources>

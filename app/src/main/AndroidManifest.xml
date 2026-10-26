@@ -89,9 +89,6 @@
             android:name=".MapActivity"
             android:exported="false" />
         <activity
-            android:name=".RutaActivity"
-            android:exported="false" />
-        <activity
             android:name=".StatsActivity"
             android:exported="false" />
         <activity
