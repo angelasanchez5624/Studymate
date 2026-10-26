@@ -73,7 +73,7 @@ public class Mapa {
         map.getOverlays().add(new CopyrightOverlay(map.getContext())); // "© OpenStreetMap contributors"
     }
 
-    /** Agrega un marcador (el pin rojo) en el mapa. */
+    /** Agrega un marcador (el pin) en el mapa. */
     public static Marker marcador(MapView map, GeoPoint punto, String titulo, String detalle) {
         Marker m = new Marker(map);
         m.setPosition(punto);
@@ -107,18 +107,40 @@ public class Mapa {
         public final java.util.List<Subject> materias = new java.util.ArrayList<>();
         public final java.util.List<String> lineas = new java.util.ArrayList<>(); // una por clase
 
-        /** Título del pin: el nombre de la materia, o "2 clases aquí" si hay varias materias. */
+        /** Título del pin: el nombre de la materia, o "4 clases aquí" (una por horario) si hay varias. */
         public String titulo(Context c) {
             return materias.size() == 1 ? materias.get(0).name
-                    : c.getString(R.string.clases_aqui, materias.size());
+                    : c.getString(R.string.clases_aqui, lineas.size());
         }
 
-        /** Detalle del pin (la burbuja de osmdroid acepta HTML: una clase por renglón). */
+        /** Salón de cada renglón de "lineas" (mismo orden), para agruparlos en la burbuja. */
+        public final java.util.List<String> salones = new java.util.ArrayList<>();
+
+        /**
+         * Detalle del pin, organizado por salón (la burbuja de osmdroid acepta HTML):
+         *   AULA 112
+         *   Programación III · Mié / Vie 8:00–10:00 a. m.
+         *   LAB REDES
+         *   Programación Móviles · Lun 4:00–6:00 p. m.
+         */
         public String detalle() {
+            java.util.LinkedHashMap<String, java.util.List<String>> porSalon = new java.util.LinkedHashMap<>();
+            for (int i = 0; i < lineas.size(); i++) {
+                String salon = i < salones.size() ? salones.get(i) : "";
+                java.util.List<String> l = porSalon.get(salon);
+                if (l == null) { l = new java.util.ArrayList<>(); porSalon.put(salon, l); }
+                l.add(lineas.get(i));
+            }
             StringBuilder sb = new StringBuilder();
-            for (String l : lineas) {
-                if (sb.length() > 0) sb.append("<br>");
-                sb.append(android.text.TextUtils.htmlEncode(l));
+            for (java.util.Map.Entry<String, java.util.List<String>> e : porSalon.entrySet()) {
+                if (!e.getKey().isEmpty()) {
+                    if (sb.length() > 0) sb.append("<br>");
+                    sb.append("<b><font color=\"#6551B5\">").append(android.text.TextUtils.htmlEncode(e.getKey())).append("</font></b>");
+                }
+                for (String l : e.getValue()) {
+                    if (sb.length() > 0) sb.append("<br>");
+                    sb.append(android.text.TextUtils.htmlEncode(l));
+                }
             }
             return sb.toString();
         }
@@ -131,20 +153,29 @@ public class Mapa {
      */
     public static GeoPoint punto(Subject s, Bloque b) {
         if (b != null && b.tieneUbicacion()) return new GeoPoint(b.lat, b.lon);
+        // Mismo salón que otro horario con ubicación: se usa esa
+        if (b != null && b.room != null && !b.room.trim().isEmpty()) {
+            for (Bloque otro : Horario.bloques(s)) {
+                if (otro.tieneUbicacion() && b.room.trim().equalsIgnoreCase(otro.room == null ? "" : otro.room.trim()))
+                    return new GeoPoint(otro.lat, otro.lon);
+            }
+        }
         for (Bloque otro : Horario.bloques(s)) if (otro.tieneUbicacion()) return null;
         if (s.lat != 0 || s.lon != 0) return new GeoPoint(s.lat, s.lon);
         return null;
     }
 
-    /** Texto de una clase para el pin, ej. "A-201 · Lun / Mié 08:00–10:00". */
+    /** Texto de una clase para el pin, ej. "Programación III · Lun / Mié 08:00–10:00" (el salón va de título). */
     private static String linea(Subject s, Bloque b, boolean conMateria) {
         StringBuilder sb = new StringBuilder();
         if (conMateria) sb.append(s.name);
-        String salon = b == null || b.room == null ? "" : b.room.trim();
         String hora = b == null ? "" : Horario.texto(b);
-        if (!salon.isEmpty()) sb.append(sb.length() > 0 ? " · " : "").append(salon);
         if (!hora.isEmpty()) sb.append(sb.length() > 0 ? " · " : "").append(hora);
         return sb.toString();
+    }
+
+    private static String salon(Bloque b) {
+        return b == null || b.room == null ? "" : b.room.trim();
     }
 
     /**
@@ -168,6 +199,7 @@ public class Mapa {
                 }
                 if (!lugar.materias.contains(s)) lugar.materias.add(s);
                 lugar.lineas.add(linea(s, b, true));
+                lugar.salones.add(salon(b));
             }
         }
         // Si el pin es de una sola materia, no hace falta repetir su nombre en cada renglón
@@ -175,11 +207,14 @@ public class Mapa {
             if (l.materias.size() != 1) continue;
             Subject s = l.materias.get(0);
             l.lineas.clear();
+            l.salones.clear();
             for (Bloque b : Horario.bloques(s)) {
                 GeoPoint p = punto(s, b);
                 if (p != null && l.punto.distanceToAsDouble(p) <= JUNTAR_METROS) {
                     String t = linea(s, b, false);
-                    if (!t.isEmpty() && !l.lineas.contains(t)) l.lineas.add(t);
+                    if (t.isEmpty() && salon(b).isEmpty()) continue;
+                    l.lineas.add(t);
+                    l.salones.add(salon(b));
                 }
             }
         }

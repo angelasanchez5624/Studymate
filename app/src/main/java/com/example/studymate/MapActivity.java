@@ -82,32 +82,42 @@ public class MapActivity extends AppCompatActivity {
      * salen dos pines; si dos clases están en el mismo edificio, comparten un pin.
      */
     private void dibujar() {
+        // Se cierran las burbujas de los pines anteriores: si no, quedaba abierta una burbuja
+        // "vieja" y el siguiente toque al pin no abría la materia
+        org.osmdroid.views.overlay.infowindow.InfoWindow.closeAllInfoWindowsOn(mapa);
         mapa.getOverlays().removeAll(pines);
         pines.clear();
+        Marker reabrir = null;
+        Mapa.Lugar reabrirLugar = null;
 
         int enfocar = getIntent().getIntExtra("subjectId", -1);
         List<GeoPoint> puntos = new ArrayList<>();
         List<GeoPoint> foco = new ArrayList<>();
         Marker primerFoco = null;
+        Mapa.Lugar primerLugar = null;
 
         for (Mapa.Lugar lugar : Mapa.lugares(Datos.SUBJECTS)) {
             Marker m = Mapa.marcador(mapa, lugar.punto, lugar.titulo(this), lugar.detalle());
-            // 1er toque al pin: muestra las clases · 2º toque: abre la materia (o pregunta cuál)
+            // 1er toque al pin: muestra las clases · 2º toque (al pin o a la burbuja): abre la materia
             m.setOnMarkerClickListener((marcador, mapView) -> {
                 if (marcador.isInfoWindowShown()) abrirMateria(lugar);
-                else marcador.showInfoWindow();
+                else mostrarBurbuja(marcador, lugar);
                 return true;
             });
+            if (clave(lugar).equals(abierto)) reabrir = m;
+            if (reabrir == m) reabrirLugar = lugar;
             pines.add(m);
             puntos.add(lugar.punto);
             for (Subject s : lugar.materias) {
                 if (s.id == enfocar) {
                     foco.add(lugar.punto);
-                    if (primerFoco == null) primerFoco = m;
+                    if (primerFoco == null) { primerFoco = m; primerLugar = lugar; }
                 }
             }
         }
         mapa.invalidate();
+        // Si la burbuja estaba abierta antes de refrescar, se vuelve a abrir en el pin nuevo
+        if (reabrir != null) mostrarBurbuja(reabrir, reabrirLugar);
 
         findViewById(R.id.tvMapaVacio).setVisibility(
                 Datos.materiasListas && puntos.isEmpty() ? View.VISIBLE : View.GONE);
@@ -123,7 +133,29 @@ public class MapActivity extends AppCompatActivity {
             BoundingBox caja = BoundingBox.fromGeoPointsSafe(encuadre);
             mapa.post(() -> mapa.zoomToBoundingBox(caja.increaseByScale(1.4f), false));
         }
-        if (primerFoco != null) primerFoco.showInfoWindow();
+        if (primerFoco != null) mostrarBurbuja(primerFoco, primerLugar);
+    }
+
+    /** Lugar con la burbuja abierta (para volver a abrirla si el mapa se refresca). */
+    private String abierto = null;
+
+    private static String clave(Mapa.Lugar l) {
+        return l.punto.getLatitude() + "," + l.punto.getLongitude();
+    }
+
+    /** Muestra la burbuja del pin; tocar la burbuja abre la materia (antes solo la cerraba). */
+    private void mostrarBurbuja(Marker m, Mapa.Lugar lugar) {
+        m.showInfoWindow();
+        abierto = clave(lugar);
+        android.view.View burbuja = m.getInfoWindow() == null ? null : m.getInfoWindow().getView();
+        if (burbuja == null) return;
+        burbuja.setOnTouchListener((v, e) -> {
+            if (e.getAction() == android.view.MotionEvent.ACTION_UP) {
+                v.performClick();
+                abrirMateria(lugar);
+            }
+            return true;
+        });
     }
 
     /** Abre la materia del pin; si en ese lugar hay varias, deja elegir cuál. */

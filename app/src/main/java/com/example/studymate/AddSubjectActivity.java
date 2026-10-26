@@ -68,10 +68,14 @@ public class AddSubjectActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.btnGuardarMateria)).setText(R.string.guardar_cambios);
             etNombre.setText(editando.name);
             etProfesor.setText(editando.professor);
+            // Materias de antes (ningún horario tiene ubicación propia): la ubicación general
+            // de la materia se pasa a sus horarios. Si algún horario ya tiene la suya, cada uno
+            // conserva la que tiene, para no copiar la ubicación de un horario en los demás.
+            boolean algunoConUbicacion = false;
+            for (Bloque b : Horario.bloques(editando)) if (b.tieneUbicacion()) algunoConUbicacion = true;
             for (Bloque b : Horario.bloques(editando)) {
                 VistaBloque vb = agregarBloque(b);
-                // Materias de antes: la ubicación era de la materia; se pasa a cada horario
-                if (!b.tieneUbicacion() && (editando.lat != 0 || editando.lon != 0)) {
+                if (!algunoConUbicacion && (editando.lat != 0 || editando.lon != 0)) {
                     vb.lat = editando.lat;
                     vb.lon = editando.lon;
                     mostrarUbicacion(vb);
@@ -115,6 +119,21 @@ public class AddSubjectActivity extends AppCompatActivity {
                 bloques.add(b);
             }
 
+            // Mismo salón = misma ubicación: los horarios toman la del primero con ese salón
+            // (ej. Lun y Mié en A-201: el mapa se marca una sola vez)
+            for (int i = 0; i < bloques.size(); i++) {
+                Bloque b = bloques.get(i);
+                if (b.room == null || b.room.isEmpty()) continue;
+                for (int j = 0; j < i; j++) {
+                    Bloque guia = bloques.get(j);
+                    if (b.room.equalsIgnoreCase(guia.room)) {
+                        b.lat = guia.lat;
+                        b.lon = guia.lon;
+                        break;
+                    }
+                }
+            }
+
             int id = editando != null ? editando.id : Datos.nextSubjectId();
             Subject s = new Subject(id, nombre, etProfesor.getText().toString().trim(), "", "");
             s.blocks = bloques;
@@ -136,12 +155,35 @@ public class AddSubjectActivity extends AppCompatActivity {
         });
     }
 
-    /** "📍 Elegir en el mapa" o "📍 Ubicación marcada · Cambiar" (+ botón Quitar) de un horario. */
+    /** Horario anterior con el mismo salón (null si no hay): ese es el que lleva la ubicación. */
+    private VistaBloque mismoSalonQue(VistaBloque vb) {
+        String salon = vb.etSalon.getText().toString().trim();
+        if (salon.isEmpty()) return null;
+        for (VistaBloque otro : vistas) {
+            if (otro == vb) return null; // solo se miran los horarios de arriba
+            if (salon.equalsIgnoreCase(otro.etSalon.getText().toString().trim())) return otro;
+        }
+        return null;
+    }
+
+    /**
+     * "📍 Elegir en el mapa" o "📍 Ubicación marcada · Cambiar" (+ botón Quitar) de un horario.
+     * Si el salón es el mismo de un horario de arriba, no se muestra el mapa: la ubicación
+     * se guarda una sola vez, en el primer horario con ese salón.
+     */
     private void mostrarUbicacion(VistaBloque vb) {
+        boolean mismoSalon = mismoSalonQue(vb) != null;
+        vb.raiz.findViewById(R.id.tvUbicacionLabel).setVisibility(mismoSalon ? View.GONE : View.VISIBLE);
+        vb.raiz.findViewById(R.id.filaUbicacionBloque).setVisibility(mismoSalon ? View.GONE : View.VISIBLE);
+        if (mismoSalon) return;
         boolean hay = vb.lat != 0 || vb.lon != 0;
         ((TextView) vb.raiz.findViewById(R.id.btnUbicacionBloque))
                 .setText(hay ? R.string.ubicacion_marcada : R.string.elegir_mapa);
         vb.raiz.findViewById(R.id.btnQuitarUbicacionBloque).setVisibility(hay ? View.VISIBLE : View.GONE);
+    }
+
+    private void mostrarUbicaciones() {
+        for (VistaBloque v : vistas) mostrarUbicacion(v);
     }
 
     /**
@@ -185,6 +227,12 @@ public class AddSubjectActivity extends AppCompatActivity {
         }
 
         vb.raiz.findViewById(R.id.btnUbicacionBloque).setOnClickListener(v -> pedirUbicacion(vb));
+        // Al escribir el salón se revisa si coincide con otro horario (un solo mapa por salón)
+        vb.etSalon.addTextChangedListener(new android.text.TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence c, int a, int b2, int d) {}
+            @Override public void onTextChanged(CharSequence c, int a, int b2, int d) {}
+            @Override public void afterTextChanged(android.text.Editable e) { mostrarUbicaciones(); }
+        });
         vb.raiz.findViewById(R.id.btnQuitarUbicacionBloque).setOnClickListener(v -> {
             vb.lat = 0;
             vb.lon = 0;
@@ -204,6 +252,7 @@ public class AddSubjectActivity extends AppCompatActivity {
             vistas.remove(vb);
             listBloques.removeView(vb.raiz);
             actualizarTitulos();
+            mostrarUbicaciones();
         });
 
         vistas.add(vb);

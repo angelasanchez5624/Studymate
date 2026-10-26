@@ -195,10 +195,12 @@
 
     <!-- Ubicación de ESTE salón en el mapa (OpenStreetMap) -->
     <TextView
+        android:id="@+id/tvUbicacionLabel"
         style="@style/App.Label"
         android:layout_marginTop="20dp"
         android:text="@string/ubicacion_salon"/>
     <LinearLayout
+        android:id="@+id/filaUbicacionBloque"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
